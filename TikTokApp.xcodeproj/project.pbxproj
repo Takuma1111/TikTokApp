@@ -38,6 +38,8 @@
 		298F459524ED36FC00E60CAB /* ColorTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298F459324ED36FC00E60CAB /* ColorTabBarController.swift */; };
 		298F459624ED36FC00E60CAB /* tabBarColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298F459424ED36FC00E60CAB /* tabBarColor.swift */; };
 		298F459B24ED38AC00E60CAB /* SemiModalViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 298F459A24ED38AC00E60CAB /* SemiModalViewController.storyboard */; };
+		298F45A124ED3AC800E60CAB /* ShareModalViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 298F45A024ED3AC700E60CAB /* ShareModalViewController.storyboard */; };
+		298F45A324ED3C0000E60CAB /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298F45A224ED3C0000E60CAB /* ShareViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,8 @@
 		298F459324ED36FC00E60CAB /* ColorTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTabBarController.swift; sourceTree = "<group>"; };
 		298F459424ED36FC00E60CAB /* tabBarColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tabBarColor.swift; sourceTree = "<group>"; };
 		298F459A24ED38AC00E60CAB /* SemiModalViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SemiModalViewController.storyboard; path = ../../../../.Trash/SemiModalViewController.storyboard; sourceTree = "<group>"; };
+		298F45A024ED3AC700E60CAB /* ShareModalViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShareModalViewController.storyboard; sourceTree = "<group>"; };
+		298F45A224ED3C0000E60CAB /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +206,8 @@
 		298F459724ED380D00E60CAB /* ShareModal */ = {
 			isa = PBXGroup;
 			children = (
+				298F45A024ED3AC700E60CAB /* ShareModalViewController.storyboard */,
+				298F45A224ED3C0000E60CAB /* ShareViewController.swift */,
 			);
 			path = ShareModal;
 			sourceTree = "<group>";
@@ -296,6 +302,7 @@
 				298F458724ED36C600E60CAB /* ハートのアイコン素材 1.png in Resources */,
 				298F459124ED36C600E60CAB /* スクリーンショット 2020-08-16 22.16.42.png in Resources */,
 				298F456724ED366D00E60CAB /* CustomTableViewCell.xib in Resources */,
+				298F45A124ED3AC800E60CAB /* ShareModalViewController.storyboard in Resources */,
 				298F458D24ED36C600E60CAB /* IMG_2227.MOV in Resources */,
 				298F454A24ED351E00E60CAB /* Main.storyboard in Resources */,
 				298F458824ED36C600E60CAB /* コメントのアイコン素材 その3 (1).png in Resources */,
@@ -329,6 +336,7 @@
 				298F457224ED368400E60CAB /* ModalPresentationController.swift in Sources */,
 				298F456F24ED368400E60CAB /* OverCurrentTransitioningInteractor.swift in Sources */,
 				298F459624ED36FC00E60CAB /* tabBarColor.swift in Sources */,
+				298F45A324ED3C0000E60CAB /* ShareViewController.swift in Sources */,
 				298F459524ED36FC00E60CAB /* ColorTabBarController.swift in Sources */,
 				298F456824ED366D00E60CAB /* CustomTableViewCell.swift in Sources */,
 				298F457124ED368400E60CAB /* OverCurrentTransitionable.swift in Sources */,

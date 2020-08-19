@@ -121,6 +121,7 @@ class ViewController: UIViewController {
         let shareButton = UIButton(frame: .init(x:320,y: view.frame.height - 240, width: 40, height: 40))
         shareButton.setImage(shareImage, for: .normal)
         shareButton.autoresizingMask = [.flexibleWidth,.flexibleTopMargin]
+        shareButton.addTarget(self, action: #selector(shareButtonEvent(_:)), for: UIControl.Event.touchUpInside)
         view.addSubview(shareButton)
     }
     
@@ -191,5 +192,9 @@ class ViewController: UIViewController {
         let vc = SemiModalViewController.make()
               present(vc, animated: true, completion: nil)
     }
+    @objc func shareButtonEvent(_ sender: UIButton) {
+          let vc = ShareViewController.make()
+                present(vc, animated: true, completion: nil)
+      }
 }
 
