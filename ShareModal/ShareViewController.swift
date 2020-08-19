@@ -54,13 +54,13 @@ class ShareViewController: UIViewController,UIScrollViewDelegate{
             let titles = ["月","火","水","木","金","土","日"] //タブのタイトル
 
             //image Array
-            let image = UIImage(named: "スクリーンショット 2020-08-16 22.16.42") as UIImage?
+            let imageArray = [UIImage(named: "facebookicon") as UIImage?,UIImage(named: "instagramicom") as UIImage?,UIImage(named: "lineicon") as UIImage?,UIImage(named: "twittericon") as UIImage?,UIImage(named: "messangericon") as UIImage?]
             //タブの縦幅(UIScrollViewと一緒にします)
             let tabLabelHeight:CGFloat = scrollView.frame.height
 
             //右端にダミーのUILabelを置くことで
             //一番右のタブもセンターに持ってくることが出来ます
-            let dummyLabelWidth = scrollView.frame.size.width/2 - tabLabelWidth/2
+            let dummyLabelWidth = scrollView.frame.size.width/10 - tabLabelWidth/10
             let headDummyLabel = UILabel()
             
             let button = UIButton()
@@ -73,7 +73,7 @@ class ShareViewController: UIViewController,UIScrollViewDelegate{
             //ダミーLabel分，はじめからずらしてあげましょう．
             var originX:CGFloat = dummyLabelWidth
             //titlesで定義したタブを1つずつ用意していく
-            for title in titles {
+            for image in imageArray {
                 //タブになるUILabelを作る
 //                let label = UILabel()
 //                label.textAlignment = .center
@@ -83,7 +83,7 @@ class ShareViewController: UIViewController,UIScrollViewDelegate{
                 let button = UIButton()
                 button.titleLabel?.textAlignment = .center
                 button.frame = CGRect(x:originX, y:0, width:50, height:50)
-                button.setTitle(title, for: .normal)
+//                button.setTitle(title, for: .normal)
                 button.setTitleColor(UIColor.black, for: .normal)
                 //scrollViewにぺたっとする
 //                scrollView.addSubview(label)
