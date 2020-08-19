@@ -1,24 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NZu-pI-TIb">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--レコメンド-->
+        <scene sceneID="O0w-2a-4wU">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="Gz3-JK-sk9" customClass="ViewController" customModule="TickTockApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6kj-nE-yBh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Uoa-8a-dpL"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="レコメンド" image="house.fill" catalog="system" landscapeImage="house.fill" largeContentSizeImage="house.fill" id="xW9-wc-NaX">
+                        <color key="badgeColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                    </tabBarItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I3p-Cj-uaR" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="952" y="-1163"/>
+        </scene>
+        <!--メッセージ-->
+        <scene sceneID="ixk-p5-9eU">
+            <objects>
+                <viewController id="wLf-oE-Fp3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="njM-ah-176">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="oCa-aV-9Dw"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="メッセージ" image="message.fill" catalog="system" id="sBI-I8-w6W"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fcg-a4-llF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="951" y="862"/>
+        </scene>
+        <!--マイページ-->
+        <scene sceneID="yT5-al-we7">
+            <objects>
+                <viewController id="gAK-PW-in3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l6F-Ta-EFV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="hkp-Tx-F77"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="マイページ" image="person.fill" catalog="system" landscapeImage="person.fill" id="mCa-L5-aJb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C6x-h8-nN5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="936" y="1553"/>
+        </scene>
+        <!--Color Tab Bar Controller-->
+        <scene sceneID="Ig9-b4-XyR">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NZu-pI-TIb" customClass="ColorTabBarController" customModule="TickTockApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="d75-mt-NFq">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Gz3-JK-sk9" kind="relationship" relationship="viewControllers" id="vfL-WR-iZF"/>
+                        <segue destination="wCF-aC-Y18" kind="relationship" relationship="viewControllers" id="jhg-nh-Bst"/>
+                        <segue destination="lHA-x2-lfz" kind="relationship" relationship="viewControllers" id="SQo-6n-9QO"/>
+                        <segue destination="wLf-oE-Fp3" kind="relationship" relationship="viewControllers" id="VTG-EO-99j"/>
+                        <segue destination="gAK-PW-in3" kind="relationship" relationship="viewControllers" id="dy1-oO-RYW"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BAI-Z6-ANm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+        <!--レコメンド-->
+        <scene sceneID="ggC-ik-byQ">
+            <objects>
+                <viewController id="wCF-aC-Y18" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g4H-Qz-Onb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="qx4-ac-p9u"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="レコメンド" image="magnifyingglass" catalog="system" id="4BV-C1-M8V"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U8V-Nl-FWu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="951" y="-522"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="vnc-kI-s5u">
+            <objects>
+                <viewController id="lHA-x2-lfz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mGf-qR-gFI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="t4j-SZ-j3a"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="plus.rectangle.fill" catalog="system" landscapeImage="plus.rectangle.fill" id="fSv-2S-dbt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kiJ-2d-AA0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="951" y="138"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="message.fill" catalog="system" width="128" height="113"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="plus.rectangle.fill" catalog="system" width="128" height="93"/>
+    </resources>
 </document>
