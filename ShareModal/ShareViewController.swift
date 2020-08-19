@@ -10,12 +10,16 @@ import UIKit
 
 class ShareViewController: UIViewController {
 
+    @IBOutlet weak var backgroundView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         //DefaultのViewを透明にする
         view.backgroundColor = UIColor.clear
-        
+
+        backgroundView.layoutIfNeeded()
+        backgroundView.clipsToBounds = true
+        backgroundView.layer.cornerRadius = 10
         // Do any additional setup after loading the view.
     }
     
