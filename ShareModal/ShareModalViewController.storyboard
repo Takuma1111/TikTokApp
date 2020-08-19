@@ -16,20 +16,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ncZ-yH-7zI">
-                                <rect key="frame" x="0.0" y="459" width="414" height="437"/>
+                                <rect key="frame" x="0.0" y="389" width="414" height="507"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="414" id="PzK-Z7-mhj"/>
-                                    <constraint firstAttribute="height" constant="437" id="SqE-Xg-IhU"/>
+                                    <constraint firstAttribute="width" constant="414" id="LBl-4J-Lhc"/>
+                                    <constraint firstAttribute="height" constant="507" id="UWa-ec-AXX"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ncZ-yH-7zI" firstAttribute="leading" secondItem="LIX-DJ-Pvk" secondAttribute="leading" id="1xZ-BT-ChL"/>
-                            <constraint firstAttribute="bottom" secondItem="ncZ-yH-7zI" secondAttribute="bottom" id="v1Z-Uv-e84"/>
-                            <constraint firstItem="ncZ-yH-7zI" firstAttribute="trailing" secondItem="LIX-DJ-Pvk" secondAttribute="trailing" id="xHH-UJ-f7g"/>
+                            <constraint firstItem="ncZ-yH-7zI" firstAttribute="top" secondItem="LIX-DJ-Pvk" secondAttribute="top" constant="345" id="3Ia-iJ-v08"/>
+                            <constraint firstAttribute="bottom" secondItem="ncZ-yH-7zI" secondAttribute="bottom" id="5fh-z7-zk5"/>
+                            <constraint firstItem="ncZ-yH-7zI" firstAttribute="leading" secondItem="LIX-DJ-Pvk" secondAttribute="leading" id="8mY-v4-aRu"/>
+                            <constraint firstItem="ncZ-yH-7zI" firstAttribute="trailing" secondItem="LIX-DJ-Pvk" secondAttribute="trailing" id="wv4-LJ-C78"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LIX-DJ-Pvk"/>
                     </view>
