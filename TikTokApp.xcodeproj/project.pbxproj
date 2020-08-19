@@ -21,7 +21,6 @@
 		298F457124ED368400E60CAB /* OverCurrentTransitionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298F456B24ED368400E60CAB /* OverCurrentTransitionable.swift */; };
 		298F457224ED368400E60CAB /* ModalPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298F456C24ED368400E60CAB /* ModalPresentationController.swift */; };
 		298F457324ED368400E60CAB /* DismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298F456D24ED368400E60CAB /* DismissAnimator.swift */; };
-		298F457424ED368400E60CAB /* SemiModalViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 298F456E24ED368400E60CAB /* SemiModalViewController.storyboard */; };
 		298F458424ED36C600E60CAB /* スクリーンショット 2020-08-16 20.48.19.png in Resources */ = {isa = PBXBuildFile; fileRef = 298F457624ED36C600E60CAB /* スクリーンショット 2020-08-16 20.48.19.png */; };
 		298F458524ED36C600E60CAB /* cellHeart.png in Resources */ = {isa = PBXBuildFile; fileRef = 298F457724ED36C600E60CAB /* cellHeart.png */; };
 		298F458624ED36C600E60CAB /* RedHeart.png in Resources */ = {isa = PBXBuildFile; fileRef = 298F457824ED36C600E60CAB /* RedHeart.png */; };
@@ -38,6 +37,7 @@
 		298F459124ED36C600E60CAB /* スクリーンショット 2020-08-16 22.16.42.png in Resources */ = {isa = PBXBuildFile; fileRef = 298F458324ED36C600E60CAB /* スクリーンショット 2020-08-16 22.16.42.png */; };
 		298F459524ED36FC00E60CAB /* ColorTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298F459324ED36FC00E60CAB /* ColorTabBarController.swift */; };
 		298F459624ED36FC00E60CAB /* tabBarColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298F459424ED36FC00E60CAB /* tabBarColor.swift */; };
+		298F459B24ED38AC00E60CAB /* SemiModalViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 298F459A24ED38AC00E60CAB /* SemiModalViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +69,6 @@
 		298F456B24ED368400E60CAB /* OverCurrentTransitionable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OverCurrentTransitionable.swift; path = ../../../../SwiftDemo/SemiModalVerticalOverCurrentTransitioning/SemiModalOverCurrentTransitioning/OverCurrentTransitionable.swift; sourceTree = "<group>"; };
 		298F456C24ED368400E60CAB /* ModalPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModalPresentationController.swift; path = ../../../../SwiftDemo/SemiModalVerticalOverCurrentTransitioning/SemiModalOverCurrentTransitioning/ModalPresentationController.swift; sourceTree = "<group>"; };
 		298F456D24ED368400E60CAB /* DismissAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DismissAnimator.swift; path = ../../../../SwiftDemo/SemiModalVerticalOverCurrentTransitioning/SemiModalOverCurrentTransitioning/DismissAnimator.swift; sourceTree = "<group>"; };
-		298F456E24ED368400E60CAB /* SemiModalViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SemiModalViewController.storyboard; path = ../../../../SwiftDemo/SemiModalVerticalOverCurrentTransitioning/SemiModalOverCurrentTransitioning/SemiModalViewController.storyboard; sourceTree = "<group>"; };
 		298F457624ED36C600E60CAB /* スクリーンショット 2020-08-16 20.48.19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "スクリーンショット 2020-08-16 20.48.19.png"; path = "../../../スクリーンショット 2020-08-16 20.48.19.png"; sourceTree = "<group>"; };
 		298F457724ED36C600E60CAB /* cellHeart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cellHeart.png; path = ../../../../Downloads/cellHeart.png; sourceTree = "<group>"; };
 		298F457824ED36C600E60CAB /* RedHeart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = RedHeart.png; path = ../../../../Downloads/RedHeart.png; sourceTree = "<group>"; };
@@ -86,6 +85,7 @@
 		298F458324ED36C600E60CAB /* スクリーンショット 2020-08-16 22.16.42.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "スクリーンショット 2020-08-16 22.16.42.png"; path = "../../../スクリーンショット 2020-08-16 22.16.42.png"; sourceTree = "<group>"; };
 		298F459324ED36FC00E60CAB /* ColorTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTabBarController.swift; sourceTree = "<group>"; };
 		298F459424ED36FC00E60CAB /* tabBarColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tabBarColor.swift; sourceTree = "<group>"; };
+		298F459A24ED38AC00E60CAB /* SemiModalViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SemiModalViewController.storyboard; path = ../../../../.Trash/SemiModalViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				298F457524ED36B900E60CAB /* Source */,
+				298F459724ED380D00E60CAB /* ShareModal */,
 				298F456424ED366D00E60CAB /* ModalView */,
 				298F459224ED36FC00E60CAB /* TabBar */,
 				298F454124ED351E00E60CAB /* TikTokApp */,
@@ -157,7 +158,7 @@
 				298F456C24ED368400E60CAB /* ModalPresentationController.swift */,
 				298F456B24ED368400E60CAB /* OverCurrentTransitionable.swift */,
 				298F456924ED368400E60CAB /* OverCurrentTransitioningInteractor.swift */,
-				298F456E24ED368400E60CAB /* SemiModalViewController.storyboard */,
+				298F459A24ED38AC00E60CAB /* SemiModalViewController.storyboard */,
 				298F456A24ED368400E60CAB /* SemiModalViewController.swift */,
 				298F456524ED366D00E60CAB /* CustomTableViewCell.xib */,
 				298F456624ED366D00E60CAB /* CustomTableViewCell.swift */,
@@ -196,6 +197,13 @@
 			);
 			name = TabBar;
 			path = ../TickTockApp/TickTockApp/TabBar;
+			sourceTree = "<group>";
+		};
+		298F459724ED380D00E60CAB /* ShareModal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ShareModal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,7 +305,7 @@
 				298F458B24ED36C600E60CAB /* banana (1).png in Resources */,
 				298F458E24ED36C600E60CAB /* E38390E3838AE3838A.png in Resources */,
 				298F458A24ED36C600E60CAB /* シェア矢印アイコン.png in Resources */,
-				298F457424ED368400E60CAB /* SemiModalViewController.storyboard in Resources */,
+				298F459B24ED38AC00E60CAB /* SemiModalViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
