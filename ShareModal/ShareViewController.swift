@@ -28,7 +28,10 @@ class ShareViewController: UIViewController,UIScrollViewDelegate{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        topView.backgroundColor = UIColor.white
+        
+        //UIViewを背面に配置
         view.sendSubviewToBack(topView)
         //DefaultのViewを透明にする
         view.backgroundColor = UIColor.clear
@@ -42,38 +45,46 @@ class ShareViewController: UIViewController,UIScrollViewDelegate{
         barView.layer.borderWidth = 0.1
         barView.layer.cornerRadius = barView.frame.height / 2
         barView.clipsToBounds = true
+        barView.backgroundColor = UIColor.lightGray
         
         //setting icon
         let imageLength = CGFloat(50)
         iconImage.image = UIImage(named: "IMG_0087.JPG") as UIImage?
         iconImage.layer.borderWidth = 0.1
         iconImage.layer.cornerRadius = iconImage.frame.height / 2
-//        iconImage.layer.cornerRadius = iconImage.frame.size. * 0.5
         iconImage.clipsToBounds = true
         
         //flag image
         flagImage.layer.borderWidth = 0.1
         flagImage.layer.cornerRadius = flagImage.frame.height / 2
         flagImage.clipsToBounds = true
+        flagImage.backgroundColor = UIColor.lightGray
+
         
         //heart image
         brokeHeartImage.layer.borderWidth = 0.1
         brokeHeartImage.layer.cornerRadius = brokeHeartImage.frame.height / 2
         brokeHeartImage.clipsToBounds = true
+        brokeHeartImage.backgroundColor = UIColor.lightGray
         
         //download Image
         downloadImage.layer.borderWidth = 0.1
         downloadImage.layer.cornerRadius = downloadImage.frame.height / 2
         downloadImage.clipsToBounds = true
+        downloadImage.backgroundColor = UIColor.lightGray
         
         //save Image
         saveImage.layer.borderWidth = 0.1
         saveImage.layer.cornerRadius = saveImage.frame.height / 2
         saveImage.clipsToBounds = true
+        saveImage.backgroundColor = UIColor.lightGray
         
         //setting moreButton
-        let buttonLength = CGFloat(50)
-        moreButton.layer.cornerRadius = buttonLength * 0.5
+        moreButton.layer.borderWidth = 0.1
+        moreButton.layer.cornerRadius = moreButton.frame.height / 2
+//        let buttonLength = CGFloat(50)
+//        moreButton.layer.cornerRadius = buttonLength * 0.5
+        moreButton.backgroundColor = UIColor.lightGray
         moreButton.clipsToBounds = true
         
         scrollView.delegate = self
