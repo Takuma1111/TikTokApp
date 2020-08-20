@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     var heartLabel : UILabel!
     private var heartJudge : Bool = true
     private var heartCount : Int = 1999
+    var playerLayer  = AVPlayerLayer()
+    var player = AVPlayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,13 +32,22 @@ class ViewController: UIViewController {
         
         //Play Video
         let path =  Bundle.main.path(forResource: "IMG_2227", ofType: "MOV")!
-        let player = AVPlayer(url: URL(fileURLWithPath: path))
+        player = AVPlayer(url: URL(fileURLWithPath: path))
         player.play()
-        let playerLayer = AVPlayerLayer(player: player)
+        playerLayer = AVPlayerLayer(player: player)
         playerLayer.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 80)
         playerLayer.videoGravity = .resizeAspectFill
         playerLayer.zPosition = -1 // ボタン等よりも後ろに表示
+        // 動画の終了時に巻き戻し再生する
+        NotificationCenter.default.addObserver(self, selector: #selector(playerItemDidReachEnd(_:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
         view.layer.insertSublayer(playerLayer, at: 0) // 動画をレイヤーとして追加
+    }
+
+    // 動画終了時に動画をループする
+    @objc private func playerItemDidReachEnd(_ notification: Notification) {
+        // 動画を最初に巻き戻す
+        playerLayer.player?.currentItem?.seek(to: CMTime.zero, completionHandler: nil)
+        player.play()
     }
     
     //thx
