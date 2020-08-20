@@ -29,11 +29,6 @@
                                         <viewLayoutGuide key="contentLayoutGuide" id="7a0-z4-rUD"/>
                                         <viewLayoutGuide key="frameLayoutGuide" id="YPB-Ue-hhS"/>
                                     </scrollView>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RNO-RJ-hZH">
-                                        <rect key="frame" x="87" y="269" width="240" height="11"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="シェア" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ha5-8v-USV">
                                         <rect key="frame" x="181" y="122" width="52" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -68,6 +63,11 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RNO-RJ-hZH">
+                                        <rect key="frame" x="87" y="259" width="240" height="5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -88,6 +88,7 @@
                     </view>
                     <connections>
                         <outlet property="backgroundView" destination="ncZ-yH-7zI" id="kH4-Cv-S8r"/>
+                        <outlet property="barView" destination="RNO-RJ-hZH" id="Rxd-ed-Zhv"/>
                         <outlet property="bottomScrollView" destination="NKy-Gy-Vhu" id="rCz-hm-VM9"/>
                         <outlet property="iconImage" destination="BoK-tR-zDJ" id="PCm-1m-Ps5"/>
                         <outlet property="moreButton" destination="eTf-NK-N1o" id="WvQ-ZP-eN4"/>

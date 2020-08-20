@@ -13,10 +13,9 @@ class ShareViewController: UIViewController,UIScrollViewDelegate{
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var bottomScrollView: UIScrollView!
     @IBOutlet weak var backgroundView: UIView!
-    
     @IBOutlet weak var moreButton: UIButton!
     @IBOutlet weak var iconImage: UIImageView!
-    
+    @IBOutlet weak var barView: UIView!
     @IBOutlet weak var topView: UIView!
     //一度だけメニュー作成をするためのフラグ
       var didPrepareMenu = false
@@ -33,6 +32,12 @@ class ShareViewController: UIViewController,UIScrollViewDelegate{
         backgroundView.layoutIfNeeded()
         backgroundView.clipsToBounds = true
         backgroundView.layer.cornerRadius = 10
+        
+        //bar View
+        let barViewLength = CGFloat(50)
+        barView.layer.borderWidth = 0.1
+        barView.layer.cornerRadius = barView.frame.height / 2
+        barView.clipsToBounds = true
         
         //setting icon
         let imageLength = CGFloat(50)
