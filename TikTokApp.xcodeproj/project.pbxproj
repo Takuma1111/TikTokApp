@@ -30,7 +30,6 @@
 		298F458A24ED36C600E60CAB /* シェア矢印アイコン.png in Resources */ = {isa = PBXBuildFile; fileRef = 298F457C24ED36C600E60CAB /* シェア矢印アイコン.png */; };
 		298F458B24ED36C600E60CAB /* banana (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 298F457D24ED36C600E60CAB /* banana (1).png */; };
 		298F458C24ED36C600E60CAB /* 家の線画イラスト (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 298F457E24ED36C600E60CAB /* 家の線画イラスト (1).png */; };
-		298F458D24ED36C600E60CAB /* IMG_2227.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 298F457F24ED36C600E60CAB /* IMG_2227.MOV */; };
 		298F458E24ED36C600E60CAB /* E38390E3838AE3838A.png in Resources */ = {isa = PBXBuildFile; fileRef = 298F458024ED36C600E60CAB /* E38390E3838AE3838A.png */; };
 		298F458F24ED36C600E60CAB /* 家の線画イラスト.png in Resources */ = {isa = PBXBuildFile; fileRef = 298F458124ED36C600E60CAB /* 家の線画イラスト.png */; };
 		298F459024ED36C600E60CAB /* IMG_0087.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 298F458224ED36C600E60CAB /* IMG_0087.JPG */; };
@@ -50,6 +49,8 @@
 		298F45B624EE938100E60CAB /* 失恋アイコン2.png in Resources */ = {isa = PBXBuildFile; fileRef = 298F45B524EE938100E60CAB /* 失恋アイコン2.png */; };
 		298F45B824EE940400E60CAB /* 無料のダウンロードのアイコン素材.png in Resources */ = {isa = PBXBuildFile; fileRef = 298F45B724EE940400E60CAB /* 無料のダウンロードのアイコン素材.png */; };
 		298F45BA24EE94C300E60CAB /* ブックマークのアイコン4.png in Resources */ = {isa = PBXBuildFile; fileRef = 298F45B924EE94C300E60CAB /* ブックマークのアイコン4.png */; };
+		298F45BC24EEB81D00E60CAB /* 画面収録 2020-08-05 20.22.20.mov in Resources */ = {isa = PBXBuildFile; fileRef = 298F45BB24EEB81D00E60CAB /* 画面収録 2020-08-05 20.22.20.mov */; };
+		298F45BE24EEB8D200E60CAB /* IMG_2227.mov in Resources */ = {isa = PBXBuildFile; fileRef = 298F45BD24EEB8D200E60CAB /* IMG_2227.mov */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,7 +91,6 @@
 		298F457C24ED36C600E60CAB /* シェア矢印アイコン.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "シェア矢印アイコン.png"; path = "../../../../Downloads/シェア矢印アイコン.png"; sourceTree = "<group>"; };
 		298F457D24ED36C600E60CAB /* banana (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "banana (1).png"; path = "../../../../Downloads/banana (1).png"; sourceTree = "<group>"; };
 		298F457E24ED36C600E60CAB /* 家の線画イラスト (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "家の線画イラスト (1).png"; path = "../../../../Downloads/家の線画イラスト (1).png"; sourceTree = "<group>"; };
-		298F457F24ED36C600E60CAB /* IMG_2227.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = IMG_2227.MOV; path = ../../../../Downloads/IMG_2227.MOV; sourceTree = "<group>"; };
 		298F458024ED36C600E60CAB /* E38390E3838AE3838A.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = E38390E3838AE3838A.png; path = ../../../../.Trash/E38390E3838AE3838A.png; sourceTree = "<group>"; };
 		298F458124ED36C600E60CAB /* 家の線画イラスト.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "家の線画イラスト.png"; path = "../../../../Downloads/家の線画イラスト.png"; sourceTree = "<group>"; };
 		298F458224ED36C600E60CAB /* IMG_0087.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = IMG_0087.JPG; path = ../../../../Downloads/IMG_0087.JPG; sourceTree = "<group>"; };
@@ -110,6 +110,8 @@
 		298F45B524EE938100E60CAB /* 失恋アイコン2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "失恋アイコン2.png"; path = "../../../../Downloads/失恋アイコン2.png"; sourceTree = "<group>"; };
 		298F45B724EE940400E60CAB /* 無料のダウンロードのアイコン素材.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "無料のダウンロードのアイコン素材.png"; path = "../../../../Downloads/無料のダウンロードのアイコン素材.png"; sourceTree = "<group>"; };
 		298F45B924EE94C300E60CAB /* ブックマークのアイコン4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ブックマークのアイコン4.png"; path = "../../../../Downloads/ブックマークのアイコン4.png"; sourceTree = "<group>"; };
+		298F45BB24EEB81D00E60CAB /* 画面収録 2020-08-05 20.22.20.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = "画面収録 2020-08-05 20.22.20.mov"; path = "../../../画面収録 2020-08-05 20.22.20.mov"; sourceTree = "<group>"; };
+		298F45BD24EEB8D200E60CAB /* IMG_2227.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = IMG_2227.mov; path = ../../../../Downloads/IMG_2227.mov; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +196,8 @@
 		298F457524ED36B900E60CAB /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				298F45BD24EEB8D200E60CAB /* IMG_2227.mov */,
+				298F45BB24EEB81D00E60CAB /* 画面収録 2020-08-05 20.22.20.mov */,
 				298F45B924EE94C300E60CAB /* ブックマークのアイコン4.png */,
 				298F45B724EE940400E60CAB /* 無料のダウンロードのアイコン素材.png */,
 				298F45B524EE938100E60CAB /* 失恋アイコン2.png */,
@@ -209,7 +213,6 @@
 				298F457724ED36C600E60CAB /* cellHeart.png */,
 				298F458024ED36C600E60CAB /* E38390E3838AE3838A.png */,
 				298F458224ED36C600E60CAB /* IMG_0087.JPG */,
-				298F457F24ED36C600E60CAB /* IMG_2227.MOV */,
 				298F457824ED36C600E60CAB /* RedHeart.png */,
 				298F457A24ED36C600E60CAB /* コメントのアイコン素材 その3 (1).png */,
 				298F457C24ED36C600E60CAB /* シェア矢印アイコン.png */,
@@ -326,6 +329,7 @@
 				298F45AB24ED726D00E60CAB /* facebookicon.png in Resources */,
 				298F459024ED36C600E60CAB /* IMG_0087.JPG in Resources */,
 				298F454F24ED352000E60CAB /* LaunchScreen.storyboard in Resources */,
+				298F45BE24EEB8D200E60CAB /* IMG_2227.mov in Resources */,
 				298F458524ED36C600E60CAB /* cellHeart.png in Resources */,
 				298F45AF24EE918E00E60CAB /* フラッグアイコン14.png in Resources */,
 				298F458424ED36C600E60CAB /* スクリーンショット 2020-08-16 20.48.19.png in Resources */,
@@ -336,7 +340,6 @@
 				298F45A924ED726D00E60CAB /* messangericon.png in Resources */,
 				298F456724ED366D00E60CAB /* CustomTableViewCell.xib in Resources */,
 				298F45A124ED3AC800E60CAB /* ShareModalViewController.storyboard in Resources */,
-				298F458D24ED36C600E60CAB /* IMG_2227.MOV in Resources */,
 				298F454A24ED351E00E60CAB /* Main.storyboard in Resources */,
 				298F458824ED36C600E60CAB /* コメントのアイコン素材 その3 (1).png in Resources */,
 				298F45AA24ED726D00E60CAB /* twittericon.png in Resources */,
@@ -344,6 +347,7 @@
 				298F45B124EE926A00E60CAB /* フラッグアイコン142.png in Resources */,
 				298F45B824EE940400E60CAB /* 無料のダウンロードのアイコン素材.png in Resources */,
 				298F458624ED36C600E60CAB /* RedHeart.png in Resources */,
+				298F45BC24EEB81D00E60CAB /* 画面収録 2020-08-05 20.22.20.mov in Resources */,
 				298F458F24ED36C600E60CAB /* 家の線画イラスト.png in Resources */,
 				298F45AC24ED726D00E60CAB /* instagramicom.png in Resources */,
 				298F458924ED36C600E60CAB /* banana.png in Resources */,

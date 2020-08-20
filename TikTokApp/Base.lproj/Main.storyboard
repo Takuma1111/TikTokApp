@@ -15,13 +15,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="Uoa-8a-dpL"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="kHe-0W-S5t" appends="YES" id="WkT-cB-an2"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="レコメンド" image="house.fill" catalog="system" landscapeImage="house.fill" largeContentSizeImage="house.fill" id="xW9-wc-NaX">
                         <color key="badgeColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                     </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I3p-Cj-uaR" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="up" id="kHe-0W-S5t">
+                    <connections>
+                        <action selector="upSwiped:" destination="Gz3-JK-sk9" id="gnS-gL-rR4"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="952" y="-1163"/>
         </scene>

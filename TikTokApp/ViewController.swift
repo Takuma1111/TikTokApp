@@ -13,25 +13,69 @@ import AVFoundation
 class ViewController: UIViewController {
 
     var heartLabel : UILabel!
+    var chatLabel : UILabel!
+    var shareLabel : UILabel!
+    var comLabel : UILabel!
+    var userNameLabel : UILabel!
+    var soundNameLabel : UILabel!
+    
     private var heartJudge : Bool = true
     private var heartCount : Int = 1999
     var playerLayer  = AVPlayerLayer()
     var player = AVPlayer()
     
+    var playerLayer2  = AVPlayerLayer()
+    var player2 = AVPlayer()
+    
+    var judge : Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //動画再生呼び出し
-        movieStart()
+        movieStart("IMG_2227")
         //UI生成呼び出し
         UIScript()
         //icon生成呼び出し
         icon()
     }
 
-    private func movieStart(){
+    @IBAction func upSwiped(_ sender: Any) {
+        print("スワイプした")
+        playerLayer.removeFromSuperlayer()
+        movieStart("画面収録 2020-08-05 20.22.20")
+        
+        heartCount = 204
+        heartLabel.text = String(heartCount)
+        chatLabel.text = "554"
+        shareLabel.text = "142"
+        
+        if(judge){
+            heartCount = 1999
+            heartLabel.text = String(heartCount)
+            chatLabel.text = "1998"
+            shareLabel.text = "2020"
+            playerLayer.removeFromSuperlayer()
+            movieStart("IMG_2227")
+        }
+        judge = true
+        //Play Video
+//        let path =  Bundle.main.path(forResource: "画面収録 2020-08-05 20.22.20", ofType: "mov")!
+//        player2 = AVPlayer(url: URL(fileURLWithPath: path))
+//        player2.play()
+//        playerLayer2 = AVPlayerLayer(player: player)
+//        playerLayer2.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 80)
+//        playerLayer2.videoGravity = .resizeAspectFill
+//        playerLayer2.zPosition = -1 // ボタン等よりも後ろに表示
+//        // 動画の終了時に巻き戻し再生する
+//        NotificationCenter.default.addObserver(self, selector: #selector(playerItemDidReachEnd2(_:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
+//        view.layer.insertSublayer(playerLayer2, at: 0) // 動画をレイヤーとして追加
+//
+    }
+    private func movieStart(_ video_path : String){
         
         //Play Video
-        let path =  Bundle.main.path(forResource: "IMG_2227", ofType: "MOV")!
+        let path =  Bundle.main.path(forResource: video_path, ofType: "mov")!
+//        let path =  Bundle.main.path(forResource: "IMG_2227", ofType: "mov")!
         player = AVPlayer(url: URL(fileURLWithPath: path))
         player.play()
         playerLayer = AVPlayerLayer(player: player)
@@ -41,14 +85,9 @@ class ViewController: UIViewController {
         // 動画の終了時に巻き戻し再生する
         NotificationCenter.default.addObserver(self, selector: #selector(playerItemDidReachEnd(_:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
         view.layer.insertSublayer(playerLayer, at: 0) // 動画をレイヤーとして追加
+        
     }
 
-    // 動画終了時に動画をループする
-    @objc private func playerItemDidReachEnd(_ notification: Notification) {
-        // 動画を最初に巻き戻す
-        playerLayer.player?.currentItem?.seek(to: CMTime.zero, completionHandler: nil)
-        player.play()
-    }
     
     //thx
     //https://qiita.com/tattn/items/499b5f49fb11f55b3df7
@@ -63,7 +102,7 @@ class ViewController: UIViewController {
         view.addSubview(heartLabel)
 
         //Chat Count Label
-        let chatLabel = UILabel(frame: CGRect(x: 170, y: view.frame.height - 285, width: view.frame.width - 40, height: 30))
+        chatLabel = UILabel(frame: CGRect(x: 170, y: view.frame.height - 285, width: view.frame.width - 40, height: 30))
         chatLabel.text = "1998"
         chatLabel.textColor = .white
         chatLabel.font = UIFont.boldSystemFont(ofSize: 15)
@@ -72,7 +111,7 @@ class ViewController: UIViewController {
         view.addSubview(chatLabel)
         
         //Share Count Label
-        let shareLabel = UILabel(frame: CGRect(x: 170, y: view.frame.height - 205, width: view.frame.width - 40, height: 30))
+        shareLabel = UILabel(frame: CGRect(x: 170, y: view.frame.height - 205, width: view.frame.width - 40, height: 30))
         shareLabel.text = "2020"
         shareLabel.textColor = .white
         shareLabel.font = UIFont.boldSystemFont(ofSize: 15)
@@ -81,7 +120,7 @@ class ViewController: UIViewController {
         view.addSubview(shareLabel)
         
         //Company Name Label    100
-        let comLabel = UILabel(frame: CGRect(x:-100, y: view.frame.height - 180, width:  view.frame.width - 40, height: 30))
+        comLabel = UILabel(frame: CGRect(x:-100, y: view.frame.height - 180, width:  view.frame.width - 40, height: 30))
         comLabel.text = "@TinTin Japan"
         comLabel.textColor = .white
         comLabel.font = UIFont.boldSystemFont(ofSize: 20)
@@ -89,7 +128,7 @@ class ViewController: UIViewController {
         comLabel.autoresizingMask = [.flexibleWidth, .flexibleBottomMargin]
         view.addSubview(comLabel)
         
-        let userNameLabel = UILabel(frame: CGRect(x:-115, y: view.frame.height - 145, width:  view.frame.width - 40, height: 30))
+        userNameLabel = UILabel(frame: CGRect(x:-115, y: view.frame.height - 145, width:  view.frame.width - 40, height: 30))
         userNameLabel.text = "tintin your X"
         userNameLabel.textColor = .white
         userNameLabel.font = UIFont.boldSystemFont(ofSize: 15)
@@ -98,7 +137,7 @@ class ViewController: UIViewController {
         view.addSubview(userNameLabel)
         
         
-        let soundNameLabel = UILabel(frame: CGRect(x:-45, y: view.frame.height - 120, width:  view.frame.width - 40, height: 30))
+        soundNameLabel = UILabel(frame: CGRect(x:-45, y: view.frame.height - 120, width:  view.frame.width - 40, height: 30))
         soundNameLabel.text = "♫ オリジナル楽曲 - TinTin Japan"
         soundNameLabel.textColor = .white
         soundNameLabel.font = UIFont.boldSystemFont(ofSize: 15)
@@ -165,6 +204,21 @@ class ViewController: UIViewController {
         self.view.addSubview(imageView2)
         self.view.addSubview(imageView3)
     }
+    
+    // 動画終了時に動画をループする
+    @objc private func playerItemDidReachEnd(_ notification: Notification) {
+        // 動画を最初に巻き戻す
+        playerLayer.player?.currentItem?.seek(to: CMTime.zero, completionHandler: nil)
+        player.play()
+    }
+    
+    // 動画終了時に動画をループする
+      @objc private func playerItemDidReachEnd2(_ notification: Notification) {
+          // 動画を最初に巻き戻す
+          playerLayer2.player?.currentItem?.seek(to: CMTime.zero, completionHandler: nil)
+          player2.play()
+      }
+      
     
     // ボタンが押された時に呼ばれるメソッド
     @objc func heartButtonEvent(_ sender: UIButton) {
