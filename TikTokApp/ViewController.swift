@@ -9,8 +9,7 @@
 import UIKit
 import AVFoundation
 
-//Fat View Controller
-//Sorry🙇‍♂️
+//Fat View Controller😭
 class ViewController: UIViewController {
 
     var heartLabel : UILabel!
@@ -34,7 +33,6 @@ class ViewController: UIViewController {
         let player = AVPlayer(url: URL(fileURLWithPath: path))
         player.play()
         let playerLayer = AVPlayerLayer(player: player)
-//        playerLayer.frame = view.bounds
         playerLayer.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 80)
         playerLayer.videoGravity = .resizeAspectFill
         playerLayer.zPosition = -1 // ボタン等よりも後ろに表示
@@ -126,18 +124,10 @@ class ViewController: UIViewController {
     }
     
     private func icon(){
-        /*画像が表示されない
-         恐らくvieoの下に隠れている*/
-      // スクリーンサイズの取得
-        //      let screenW:CGFloat = view.frame.size.width
-        //      let screenH:CGFloat = view.frame.size.height
-      // 画像を読み込んで、準備しておいたimageSampleに設定
         //バナナアイコン
         let iconImage = UIImage(named: "E38390E3838AE3838A") as UIImage?
         let imageView = UIImageView(image:iconImage)
         imageView.frame = CGRect(x:310, y:330, width:50, height:50)
-//        self.view.bringSubviewToFront(imageView)
-//        imageView.layer.cornerRadius = 300 * 0.5
         let imageLength = CGFloat(50)
         imageView.layer.cornerRadius = imageLength * 0.5 //1辺の長さ * 0.5にする
         imageView.clipsToBounds = true
@@ -159,12 +149,7 @@ class ViewController: UIViewController {
         rollingAnimation.duration = 8.0 // 周期２秒
         rollingAnimation.repeatDuration = CFTimeInterval.infinity // 無限に
         imageView3.layer.add(rollingAnimation, forKey: "rollingImage") // アニメーションを追加
-        // 画像を中央に設定
-//        imageView.center.x = view.center.x
-//        imageView.center.y = view.center.y
-//      imageView.center = CGPoint(x:screenW/2, y:screenH/2)
-//        let lay = UIImageView.layerClass
-      // 設定した画像をスクリーンに表示する
+       // 設定した画像をスクリーンに表示する
         self.view.addSubview(imageView)
         self.view.addSubview(imageView2)
         self.view.addSubview(imageView3)
