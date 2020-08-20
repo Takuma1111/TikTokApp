@@ -17,8 +17,12 @@ class ShareViewController: UIViewController,UIScrollViewDelegate{
     @IBOutlet weak var iconImage: UIImageView!
     @IBOutlet weak var barView: UIView!
     @IBOutlet weak var topView: UIView!
+    @IBOutlet weak var flagImage: UIButton!
+    @IBOutlet weak var brokeHeartImage: UIButton!
+    @IBOutlet weak var downloadImage: UIButton!
+    @IBOutlet weak var saveImage: UIButton!
     //一度だけメニュー作成をするためのフラグ
-      var didPrepareMenu = false
+    var didPrepareMenu = false
       //タブの横幅
       let tabLabelWidth:CGFloat = 100
 
@@ -46,6 +50,26 @@ class ShareViewController: UIViewController,UIScrollViewDelegate{
         iconImage.layer.cornerRadius = iconImage.frame.height / 2
 //        iconImage.layer.cornerRadius = iconImage.frame.size. * 0.5
         iconImage.clipsToBounds = true
+        
+        //flag image
+        flagImage.layer.borderWidth = 0.1
+        flagImage.layer.cornerRadius = flagImage.frame.height / 2
+        flagImage.clipsToBounds = true
+        
+        //heart image
+        brokeHeartImage.layer.borderWidth = 0.1
+        brokeHeartImage.layer.cornerRadius = brokeHeartImage.frame.height / 2
+        brokeHeartImage.clipsToBounds = true
+        
+        //download Image
+        downloadImage.layer.borderWidth = 0.1
+        downloadImage.layer.cornerRadius = downloadImage.frame.height / 2
+        downloadImage.clipsToBounds = true
+        
+        //save Image
+        saveImage.layer.borderWidth = 0.1
+        saveImage.layer.cornerRadius = saveImage.frame.height / 2
+        saveImage.clipsToBounds = true
         
         //setting moreButton
         let buttonLength = CGFloat(50)

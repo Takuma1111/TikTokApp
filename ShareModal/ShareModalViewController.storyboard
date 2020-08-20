@@ -46,7 +46,45 @@
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NKy-Gy-Vhu">
                                         <rect key="frame" x="0.0" y="303" width="414" height="90"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQu-yv-WCX">
+                                                <rect key="frame" x="30" y="22" width="53" height="46"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="フラッグアイコン142.png">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cuX-iw-ll3">
+                                                <rect key="frame" x="129" y="22" width="53" height="46"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="失恋アイコン2.png">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oq6-ek-erq">
+                                                <rect key="frame" x="231" y="22" width="53" height="46"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="無料のダウンロードのアイコン素材.png">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Csr-At-vzT">
+                                                <rect key="frame" x="331" y="22" width="50" height="46"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="ブックマークのアイコン4.png">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <viewLayoutGuide key="contentLayoutGuide" id="sNE-G9-KdS"/>
                                         <viewLayoutGuide key="frameLayoutGuide" id="Den-c9-1Km"/>
                                     </scrollView>
@@ -90,8 +128,12 @@
                         <outlet property="backgroundView" destination="ncZ-yH-7zI" id="kH4-Cv-S8r"/>
                         <outlet property="barView" destination="RNO-RJ-hZH" id="Rxd-ed-Zhv"/>
                         <outlet property="bottomScrollView" destination="NKy-Gy-Vhu" id="rCz-hm-VM9"/>
+                        <outlet property="brokeHeartImage" destination="cuX-iw-ll3" id="OhM-ad-7r6"/>
+                        <outlet property="downloadImage" destination="Oq6-ek-erq" id="9bB-RS-dS8"/>
+                        <outlet property="flagImage" destination="WQu-yv-WCX" id="id7-Rl-SWW"/>
                         <outlet property="iconImage" destination="BoK-tR-zDJ" id="PCm-1m-Ps5"/>
                         <outlet property="moreButton" destination="eTf-NK-N1o" id="WvQ-ZP-eN4"/>
+                        <outlet property="saveImage" destination="Csr-At-vzT" id="0ep-An-11e"/>
                         <outlet property="scrollView" destination="Ujo-Gu-tnm" id="Jxf-H1-IPN"/>
                         <outlet property="topView" destination="12a-nz-vba" id="7dk-hc-0ZL"/>
                     </connections>
@@ -101,4 +143,10 @@
             <point key="canvasLocation" x="-1594.2028985507247" y="103.79464285714285"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ブックマークのアイコン4.png" width="32" height="32"/>
+        <image name="フラッグアイコン142.png" width="32" height="32"/>
+        <image name="失恋アイコン2.png" width="32" height="32"/>
+        <image name="無料のダウンロードのアイコン素材.png" width="32" height="32"/>
+    </resources>
 </document>
