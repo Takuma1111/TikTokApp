@@ -27,14 +27,19 @@ class ViewController: UIViewController {
     var playerLayer2  = AVPlayerLayer()
     var player2 = AVPlayer()
     
+    var iconImage : UIImage?
+    var musicIcon : UIImage?
+    var imageView : UIImageView?
+    var imageView3 : UIImageView?
+
     var judge : Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //動画再生呼び出し
-        movieStart("IMG_2227")
+        movieStart("マイムービー 1")
         //UI生成呼び出し
-        UIScript()
+        UIScript("1998","2020","@TinTin Japan","船に乗ったお","♫ オリジナル楽曲 - TinTin Japan")
         //icon生成呼び出し
         icon()
     }
@@ -42,44 +47,38 @@ class ViewController: UIViewController {
     @IBAction func upSwiped(_ sender: Any) {
         print("スワイプした")
         playerLayer.removeFromSuperlayer()
-        movieStart("画面収録 2020-08-05 20.22.20")
-        
         heartCount = 204
         heartLabel.text = String(heartCount)
         chatLabel.text = "554"
         shareLabel.text = "142"
-        
-        comLabel.text = ""
-        userNameLabel.text = ""
-        soundNameLabel.text = ""
-        
+        comLabel.text = "@🤮🤮🤮☀️"
+        userNameLabel.text = "江ノ島行った"
+        soundNameLabel.text = "♫ オリジナル楽曲 - 🤮🤮🤮☀️"
+        imageView?.image = UIImage(named: "tabacoIcon")
+        imageView3?.image = UIImage(named: "tabaco")
+        movieStart("IMG_2182")
+
+
         if(judge){
             heartCount = 1999
             heartLabel.text = String(heartCount)
             chatLabel.text = "1998"
             shareLabel.text = "2020"
+            comLabel.text = "@TinTin Japan"
+            userNameLabel.text = "船に乗ったお"
+            soundNameLabel.text = "♫ オリジナル楽曲 - TinTin Japan"
+            imageView?.image = UIImage(named: "E38390E3838AE3838A")
+            imageView3?.image = UIImage(named: "スクリーンショット 2020-08-16 22.16.42")
             playerLayer.removeFromSuperlayer()
-            movieStart("IMG_2227")
+            movieStart("マイムービー 1")
         }
         judge = true
-        //Play Video
-//        let path =  Bundle.main.path(forResource: "画面収録 2020-08-05 20.22.20", ofType: "mov")!
-//        player2 = AVPlayer(url: URL(fileURLWithPath: path))
-//        player2.play()
-//        playerLayer2 = AVPlayerLayer(player: player)
-//        playerLayer2.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 80)
-//        playerLayer2.videoGravity = .resizeAspectFill
-//        playerLayer2.zPosition = -1 // ボタン等よりも後ろに表示
-//        // 動画の終了時に巻き戻し再生する
-//        NotificationCenter.default.addObserver(self, selector: #selector(playerItemDidReachEnd2(_:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
-//        view.layer.insertSublayer(playerLayer2, at: 0) // 動画をレイヤーとして追加
-//
+
     }
     private func movieStart(_ video_path : String){
         
         //Play Video
         let path =  Bundle.main.path(forResource: video_path, ofType: "mov")!
-//        let path =  Bundle.main.path(forResource: "IMG_2227", ofType: "mov")!
         player = AVPlayer(url: URL(fileURLWithPath: path))
         player.play()
         playerLayer = AVPlayerLayer(player: player)
@@ -95,7 +94,7 @@ class ViewController: UIViewController {
     
     //thx
     //https://qiita.com/tattn/items/499b5f49fb11f55b3df7
-    private func UIScript(){
+    private func UIScript(_ chat:String, _ share:String,_ com:String,_ user:String,_ sound:String){
         //Heart Count Label
         heartLabel = UILabel(frame: CGRect(x: 170, y: view.frame.height - 365, width: view.frame.width - 40, height: 30))
         heartLabel.text = String(heartCount)
@@ -107,7 +106,7 @@ class ViewController: UIViewController {
 
         //Chat Count Label
         chatLabel = UILabel(frame: CGRect(x: 170, y: view.frame.height - 285, width: view.frame.width - 40, height: 30))
-        chatLabel.text = "1998"
+        chatLabel.text = chat
         chatLabel.textColor = .white
         chatLabel.font = UIFont.boldSystemFont(ofSize: 15)
         chatLabel.textAlignment = .center
@@ -116,7 +115,7 @@ class ViewController: UIViewController {
         
         //Share Count Label
         shareLabel = UILabel(frame: CGRect(x: 170, y: view.frame.height - 205, width: view.frame.width - 40, height: 30))
-        shareLabel.text = "2020"
+        shareLabel.text = share
         shareLabel.textColor = .white
         shareLabel.font = UIFont.boldSystemFont(ofSize: 15)
         shareLabel.textAlignment = .center
@@ -125,7 +124,7 @@ class ViewController: UIViewController {
         
         //Company Name Label    100
         comLabel = UILabel(frame: CGRect(x:-100, y: view.frame.height - 180, width:  view.frame.width - 40, height: 30))
-        comLabel.text = "@TinTin Japan"
+        comLabel.text = com
         comLabel.textColor = .white
         comLabel.font = UIFont.boldSystemFont(ofSize: 20)
         comLabel.textAlignment = .center
@@ -133,7 +132,7 @@ class ViewController: UIViewController {
         view.addSubview(comLabel)
         
         userNameLabel = UILabel(frame: CGRect(x:-115, y: view.frame.height - 145, width:  view.frame.width - 40, height: 30))
-        userNameLabel.text = "tintin your X"
+        userNameLabel.text = user
         userNameLabel.textColor = .white
         userNameLabel.font = UIFont.boldSystemFont(ofSize: 15)
         userNameLabel.textAlignment = .center
@@ -142,7 +141,7 @@ class ViewController: UIViewController {
         
         
         soundNameLabel = UILabel(frame: CGRect(x:-45, y: view.frame.height - 120, width:  view.frame.width - 40, height: 30))
-        soundNameLabel.text = "♫ オリジナル楽曲 - TinTin Japan"
+        soundNameLabel.text = sound
         soundNameLabel.textColor = .white
         soundNameLabel.font = UIFont.boldSystemFont(ofSize: 15)
         soundNameLabel.textAlignment = .center
@@ -179,12 +178,12 @@ class ViewController: UIViewController {
     
     private func icon(){
         //バナナアイコン
-        let iconImage = UIImage(named: "E38390E3838AE3838A") as UIImage?
-        let imageView = UIImageView(image:iconImage)
-        imageView.frame = CGRect(x:310, y:330, width:50, height:50)
+        iconImage = UIImage(named: "E38390E3838AE3838A") as UIImage?
+        imageView = UIImageView(image:iconImage)
+        imageView!.frame = CGRect(x:310, y:330, width:50, height:50)
         let imageLength = CGFloat(50)
-        imageView.layer.cornerRadius = imageLength * 0.5 //1辺の長さ * 0.5にする
-        imageView.clipsToBounds = true
+        imageView!.layer.cornerRadius = imageLength * 0.5 //1辺の長さ * 0.5にする
+        imageView!.clipsToBounds = true
         
         //＋画像
         let plusImage = UIImage(named: "スクリーンショット 2020-08-16 20.48.19") as UIImage?
@@ -194,19 +193,19 @@ class ViewController: UIViewController {
         imageView2.clipsToBounds = true
         
         //回るバナナアイコン
-        let musicIcon = UIImage(named: "スクリーンショット 2020-08-16 22.16.42") as UIImage?
-        let imageView3 = UIImageView(image: musicIcon)
-        imageView3.frame = CGRect(x:315, y:670, width:50, height:50)
+        musicIcon = UIImage(named: "スクリーンショット 2020-08-16 22.16.42") as UIImage?
+        imageView3 = UIImageView(image: musicIcon)
+        imageView3!.frame = CGRect(x:315, y:670, width:50, height:50)
         let rollingAnimation = CABasicAnimation(keyPath: "transform.rotation")
         rollingAnimation.fromValue = 0
         rollingAnimation.toValue = CGFloat.pi * 2.0
         rollingAnimation.duration = 8.0 // 周期２秒
         rollingAnimation.repeatDuration = CFTimeInterval.infinity // 無限に
-        imageView3.layer.add(rollingAnimation, forKey: "rollingImage") // アニメーションを追加
+        imageView3!.layer.add(rollingAnimation, forKey: "rollingImage") // アニメーションを追加
        // 設定した画像をスクリーンに表示する
-        self.view.addSubview(imageView)
+        self.view.addSubview(imageView!)
         self.view.addSubview(imageView2)
-        self.view.addSubview(imageView3)
+        self.view.addSubview(imageView3!)
     }
     
     // 動画終了時に動画をループする
