@@ -82,8 +82,6 @@ class ShareViewController: UIViewController,UIScrollViewDelegate{
         //setting moreButton
         moreButton.layer.borderWidth = 0.1
         moreButton.layer.cornerRadius = moreButton.frame.height / 2
-//        let buttonLength = CGFloat(50)
-//        moreButton.layer.cornerRadius = buttonLength * 0.5
         moreButton.backgroundColor = UIColor.lightGray
         moreButton.clipsToBounds = true
         
@@ -97,13 +95,8 @@ class ShareViewController: UIViewController,UIScrollViewDelegate{
           return vc
       }
 
-        //viewDidLoad等で処理を行うと
-        //scrollViewの正しいサイズが取得出来ません
         override func viewDidLayoutSubviews() {
 
-            //viewDidLayoutSubviewsはviewDidLoadと違い
-            //何度も呼ばれてしまうメソッドなので
-            //一度だけメニュー作成を行うようにします
             if didPrepareMenu { return }
             didPrepareMenu = true
 
@@ -112,11 +105,9 @@ class ShareViewController: UIViewController,UIScrollViewDelegate{
 
             //image Array
             let imageArray = [UIImage(named: "facebookicon") as UIImage?,UIImage(named: "instagramicom") as UIImage?,UIImage(named: "lineicon") as UIImage?,UIImage(named: "twittericon") as UIImage?,UIImage(named: "messangericon") as UIImage?]
-            //タブの縦幅(UIScrollViewと一緒にします)
             let tabLabelHeight:CGFloat = scrollView.frame.height
             let bottomHeight:CGFloat = bottomScrollView.frame.height
-            //右端にダミーのUILabelを置くことで
-            //一番右のタブもセンターに持ってくることが出来ます
+           
             let dummyLabelWidth = scrollView.frame.size.width/10 - tabLabelWidth/10
             let bottomScroll = bottomScrollView.frame.size.width/10 - bottomHeight/10
             
@@ -127,72 +118,40 @@ class ShareViewController: UIViewController,UIScrollViewDelegate{
             
             bottomButton.frame = CGRect(x:0, y:0, width:bottomScroll, height:bottomHeight)
             button.frame = CGRect(x:0, y:0, width:dummyLabelWidth, height:tabLabelHeight)
-//            headDummyLabel.frame = CGRect(x:0, y:0, width:dummyLabelWidth, height:tabLabelHeight)
-//            scrollView.addSubview(headDummyLabel)
             scrollView.addSubview(button)
             bottomScrollView.addSubview(bottomButton)
-            //タブのx座標．
-            //ダミーLabel分，はじめからずらしてあげましょう．
             var originX:CGFloat = dummyLabelWidth
             var bottomOriginX:CGFloat = bottomScroll
-            //titlesで定義したタブを1つずつ用意していく
             for image in imageArray {
-                //タブになるUILabelを作る
-//                let label = UILabel()
-//                label.textAlignment = .center
-//                label.frame = CGRect(x:originX, y:0, width:tabLabelWidth, height:tabLabelHeight)
-//                label.text = title
-
                 let button = UIButton()
                 button.titleLabel?.textAlignment = .center
                 button.frame = CGRect(x:originX, y:0, width:50, height:50)
-//                button.setTitle(title, for: .normal)
                 button.setTitleColor(UIColor.black, for: .normal)
-                //scrollViewにぺたっとする
-//                scrollView.addSubview(label)
                 button.addTarget(self, action: #selector(shareButtonEvent(_:)), for: UIControl.Event.touchUpInside)
                 button.setImage(image, for: .normal)
 
                 scrollView.addSubview(button)
-                //次のタブのx座標を用意する
                 originX += tabLabelWidth
             }
             
             for image in imageArray {
-                            //タブになるUILabelを作る
-            //                let label = UILabel()
-            //                label.textAlignment = .center
-            //                label.frame = CGRect(x:originX, y:0, width:tabLabelWidth, height:tabLabelHeight)
-            //                label.text = title
 
                             let button = UIButton()
                             button.titleLabel?.textAlignment = .center
                             button.frame = CGRect(x:originX, y:0, width:50, height:50)
-            //                button.setTitle(title, for: .normal)
                             button.setTitleColor(UIColor.black, for: .normal)
-                            //scrollViewにぺたっとする
-            //                scrollView.addSubview(label)
                             button.addTarget(self, action: #selector(shareButtonEvent(_:)), for: UIControl.Event.touchUpInside)
                             button.setImage(image, for: .normal)
 
                             bottomScrollView.addSubview(button)
-                            //次のタブのx座標を用意する
                             originX += tabLabelWidth
                         }
             
-            
-
-            //左端にダミーのUILabelを置くことで
-            //一番左のタブもセンターに持ってくることが出来ます
             let tailLabel = UILabel()
             tailLabel.frame = CGRect(x:originX, y:0, width:dummyLabelWidth, height:tabLabelHeight)
             scrollView.addSubview(tailLabel)
             bottomScrollView.addSubview(tailLabel)
-            //ダミーLabel分を足して上げましょう
             originX += dummyLabelWidth
-
-            //scrollViewのcontentSizeを，タブ全体のサイズに合わせてあげる(ここ重要！)
-            //最終的なoriginX = タブ全体の横幅 になります
             scrollView.contentSize = CGSize(width:originX, height:tabLabelHeight)
             bottomScrollView.contentSize = CGSize(width:originX, height:tabLabelHeight)
         }
@@ -201,30 +160,5 @@ class ShareViewController: UIViewController,UIScrollViewDelegate{
             print(sender.titleLabel?.text)
          }
 
-        func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-            guard scrollView == self.scrollView else { return }
-            
-            //微妙なスクロール位置でスクロールをやめた場合に
-            //ちょうどいいタブをセンターに持ってくるためのアニメーションです
-
-            //現在のスクロールの位置(scrollView.contentOffset.x)から
-            //どこのタブを表示させたいか計算します
-//            let index = Int((scrollView.contentOffset.x + tabLabelWidth/2) / tabLabelWidth)
-//            let x = index * 100
-//            UIView.animate(withDuration: 0.3, animations: {
-//                scrollView.contentOffset = CGPoint(x:x, y:0)
-//            })
-        }
-
-        func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-            guard scrollView == self.scrollView else { return }
-
-            //これも上と同様に
-
-//            let index = Int((scrollView.contentOffset.x + tabLabelWidth/2) / tabLabelWidth)
-//            let x = index * 100
-//            UIView.animate(withDuration: 1.0, animations: {
-//                scrollView.contentOffset = CGPoint(x:x, y:0)
-//            })
-        }
+     
 }
