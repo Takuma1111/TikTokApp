@@ -49,6 +49,10 @@ class ViewController: UIViewController {
         chatLabel.text = "554"
         shareLabel.text = "142"
         
+        comLabel.text = ""
+        userNameLabel.text = ""
+        soundNameLabel.text = ""
+        
         if(judge){
             heartCount = 1999
             heartLabel.text = String(heartCount)
