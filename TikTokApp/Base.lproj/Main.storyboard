@@ -10,7 +10,7 @@
         <!--レコメンド-->
         <scene sceneID="O0w-2a-4wU">
             <objects>
-                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="Gz3-JK-sk9" customClass="ViewController" customModule="TickTockApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="Gz3-JK-sk9" customClass="ViewController" customModule="TikTokApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6kj-nE-yBh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,18 +37,76 @@
         <!--メッセージ-->
         <scene sceneID="ixk-p5-9eU">
             <objects>
-                <viewController id="wLf-oE-Fp3" sceneMemberID="viewController">
+                <viewController id="wLf-oE-Fp3" customClass="ChatViewController" customModule="TikTokApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="njM-ah-176">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DgV-Pl-i4B">
+                                <rect key="frame" x="15" y="59" width="384" height="571"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JO2-lG-9sH">
+                                <rect key="frame" x="169" y="675" width="76" height="138"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7d3-zC-KEv">
+                                        <rect key="frame" x="15" y="15" width="46" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ace-kF-eVR">
+                                        <rect key="frame" x="15" y="64" width="46" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2z-Eh-GIu">
+                                        <rect key="frame" x="15" y="103" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="sendButton:" destination="wLf-oE-Fp3" eventType="touchUpInside" id="PD6-pQ-g7x"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="Ace-kF-eVR" firstAttribute="top" secondItem="7d3-zC-KEv" secondAttribute="bottom" constant="15" id="0JK-46-b2q"/>
+                                    <constraint firstItem="Ace-kF-eVR" firstAttribute="leading" secondItem="JO2-lG-9sH" secondAttribute="leading" constant="15" id="1MV-nk-T3O"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ace-kF-eVR" secondAttribute="trailing" constant="15" id="CrR-Ne-hSH"/>
+                                    <constraint firstAttribute="bottom" secondItem="b2z-Eh-GIu" secondAttribute="bottom" constant="5" id="EGJ-ZZ-koK"/>
+                                    <constraint firstItem="7d3-zC-KEv" firstAttribute="top" secondItem="JO2-lG-9sH" secondAttribute="top" constant="15" id="Jyt-IJ-aZJ"/>
+                                    <constraint firstItem="b2z-Eh-GIu" firstAttribute="leading" secondItem="JO2-lG-9sH" secondAttribute="leading" constant="15" id="Oqm-ui-juK"/>
+                                    <constraint firstAttribute="trailing" secondItem="b2z-Eh-GIu" secondAttribute="trailing" constant="15" id="h1R-5Q-i9j"/>
+                                    <constraint firstItem="7d3-zC-KEv" firstAttribute="leading" secondItem="JO2-lG-9sH" secondAttribute="leading" constant="15" id="ja8-x7-xwm"/>
+                                    <constraint firstAttribute="trailing" secondItem="7d3-zC-KEv" secondAttribute="trailing" constant="15" id="l9B-jk-QGZ"/>
+                                    <constraint firstItem="b2z-Eh-GIu" firstAttribute="top" secondItem="Ace-kF-eVR" secondAttribute="bottom" constant="5" id="uWP-oD-hOz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="oCa-aV-9Dw" firstAttribute="trailing" secondItem="DgV-Pl-i4B" secondAttribute="trailing" constant="15" id="5oV-QG-rlC"/>
+                            <constraint firstItem="JO2-lG-9sH" firstAttribute="bottom" secondItem="oCa-aV-9Dw" secondAttribute="bottom" id="AYr-6U-3C9"/>
+                            <constraint firstItem="JO2-lG-9sH" firstAttribute="top" secondItem="DgV-Pl-i4B" secondAttribute="bottom" constant="45" id="YVd-lc-O01"/>
+                            <constraint firstItem="DgV-Pl-i4B" firstAttribute="top" secondItem="oCa-aV-9Dw" secondAttribute="top" constant="15" id="c6U-jq-4Hf"/>
+                            <constraint firstItem="JO2-lG-9sH" firstAttribute="centerX" secondItem="DgV-Pl-i4B" secondAttribute="centerX" id="cVb-eJ-ptL"/>
+                            <constraint firstItem="DgV-Pl-i4B" firstAttribute="leading" secondItem="oCa-aV-9Dw" secondAttribute="leading" constant="15" id="l6l-4l-35f"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="oCa-aV-9Dw"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="メッセージ" image="message.fill" catalog="system" id="sBI-I8-w6W"/>
+                    <connections>
+                        <outlet property="inputViewBottomMargin" destination="AYr-6U-3C9" id="3bC-v5-cun"/>
+                        <outlet property="messageInputView" destination="Ace-kF-eVR" id="so7-Ss-meP"/>
+                        <outlet property="nameInputView" destination="7d3-zC-KEv" id="P6g-6H-w3Q"/>
+                        <outlet property="textView" destination="DgV-Pl-i4B" id="q5E-ga-XBB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fcg-a4-llF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="951" y="862"/>
+            <point key="canvasLocation" x="950.72463768115949" y="861.83035714285711"/>
         </scene>
         <!--マイページ-->
         <scene sceneID="yT5-al-we7">
@@ -69,7 +127,7 @@
         <!--Color Tab Bar Controller-->
         <scene sceneID="Ig9-b4-XyR">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NZu-pI-TIb" customClass="ColorTabBarController" customModule="TickTockApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NZu-pI-TIb" customClass="ColorTabBarController" customModule="TikTokApp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="d75-mt-NFq">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
