@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		29113A0D24FA8BB400B5B9BC /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29113A0C24FA8BB400B5B9BC /* ChatViewController.swift */; };
 		29113A0F24FA8E6F00B5B9BC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 29113A0E24FA8E6F00B5B9BC /* GoogleService-Info.plist */; };
+		29113A1624FAAEDB00B5B9BC /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29113A1524FAAEDB00B5B9BC /* Message.swift */; };
+		29113A1A24FAB15500B5B9BC /* ChatMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29113A1924FAB15500B5B9BC /* ChatMessageViewController.swift */; };
+		29113A1C24FAB43600B5B9BC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29113A1B24FAB43600B5B9BC /* LoginViewController.swift */; };
 		298F454324ED351E00E60CAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298F454224ED351E00E60CAB /* AppDelegate.swift */; };
 		298F454524ED351E00E60CAB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298F454424ED351E00E60CAB /* SceneDelegate.swift */; };
 		298F454724ED351E00E60CAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298F454624ED351E00E60CAB /* ViewController.swift */; };
@@ -57,8 +60,8 @@
 		298F45C424EFBD4000E60CAB /* マイムービー 1.mov in Resources */ = {isa = PBXBuildFile; fileRef = 298F45C324EFBD4000E60CAB /* マイムービー 1.mov */; };
 		298F45C624EFC5D000E60CAB /* tabaco.png in Resources */ = {isa = PBXBuildFile; fileRef = 298F45C524EFC5D000E60CAB /* tabaco.png */; };
 		298F45C824EFC66100E60CAB /* tabacoIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 298F45C724EFC66100E60CAB /* tabacoIcon.png */; };
-		37C0F9A48D790C355066FF0D /* Pods_TikTokAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C714F1BF8DBA35B4B3408471 /* Pods_TikTokAppTests.framework */; };
-		BA7A4008FE84A5B2C36F9FB2 /* Pods_TikTokApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40F0024FC8755F7C3AAB947B /* Pods_TikTokApp.framework */; };
+		3194C70977F40E9DA3563354 /* Pods_TikTokAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1B4DDDDAEB6353F61009DE5 /* Pods_TikTokAppTests.framework */; };
+		CC8033B21A8F9B370909F518 /* Pods_TikTokApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4CFFC909939765CA8EF08B6 /* Pods_TikTokApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,8 +75,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E2ACF88D970ABBADDA5218F /* Pods-TikTokAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTokAppTests.debug.xcconfig"; path = "Target Support Files/Pods-TikTokAppTests/Pods-TikTokAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		25E0E8F73F66857F1D638923 /* Pods-TikTokAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTokAppTests.release.xcconfig"; path = "Target Support Files/Pods-TikTokAppTests/Pods-TikTokAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		29113A0C24FA8BB400B5B9BC /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		29113A0E24FA8E6F00B5B9BC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		29113A1524FAAEDB00B5B9BC /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		29113A1924FAB15500B5B9BC /* ChatMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageViewController.swift; sourceTree = "<group>"; };
+		29113A1B24FAB43600B5B9BC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		298F453F24ED351E00E60CAB /* TikTokApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TikTokApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		298F454224ED351E00E60CAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		298F454424ED351E00E60CAB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,12 +134,10 @@
 		298F45C324EFBD4000E60CAB /* マイムービー 1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = "マイムービー 1.mov"; path = "../../../../Documents/マイムービー 1.mov"; sourceTree = "<group>"; };
 		298F45C524EFC5D000E60CAB /* tabaco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tabaco.png; path = ../../../tabaco.png; sourceTree = "<group>"; };
 		298F45C724EFC66100E60CAB /* tabacoIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tabacoIcon.png; path = ../../../tabacoIcon.png; sourceTree = "<group>"; };
-		40F0024FC8755F7C3AAB947B /* Pods_TikTokApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TikTokApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5726EBAED09F044451C1CEE2 /* Pods-TikTokApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTokApp.debug.xcconfig"; path = "Target Support Files/Pods-TikTokApp/Pods-TikTokApp.debug.xcconfig"; sourceTree = "<group>"; };
-		9E3D20E824F1496FCF47E5DA /* Pods-TikTokAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTokAppTests.debug.xcconfig"; path = "Target Support Files/Pods-TikTokAppTests/Pods-TikTokAppTests.debug.xcconfig"; sourceTree = "<group>"; };
-		C714F1BF8DBA35B4B3408471 /* Pods_TikTokAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TikTokAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CA13B37AB4C0567EF898A584 /* Pods-TikTokApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTokApp.release.xcconfig"; path = "Target Support Files/Pods-TikTokApp/Pods-TikTokApp.release.xcconfig"; sourceTree = "<group>"; };
-		E8C7B2148F4C85BF4000D903 /* Pods-TikTokAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTokAppTests.release.xcconfig"; path = "Target Support Files/Pods-TikTokAppTests/Pods-TikTokAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		A98B6CD73CD93E5650F2DD8A /* Pods-TikTokApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTokApp.debug.xcconfig"; path = "Target Support Files/Pods-TikTokApp/Pods-TikTokApp.debug.xcconfig"; sourceTree = "<group>"; };
+		B201D5449FEDE937EE3ECCA1 /* Pods-TikTokApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTokApp.release.xcconfig"; path = "Target Support Files/Pods-TikTokApp/Pods-TikTokApp.release.xcconfig"; sourceTree = "<group>"; };
+		B4CFFC909939765CA8EF08B6 /* Pods_TikTokApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TikTokApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1B4DDDDAEB6353F61009DE5 /* Pods_TikTokAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TikTokAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +145,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA7A4008FE84A5B2C36F9FB2 /* Pods_TikTokApp.framework in Frameworks */,
+				CC8033B21A8F9B370909F518 /* Pods_TikTokApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,16 +153,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37C0F9A48D790C355066FF0D /* Pods_TikTokAppTests.framework in Frameworks */,
+				3194C70977F40E9DA3563354 /* Pods_TikTokAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		29113A1424FAAEC700B5B9BC /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				29113A1524FAAEDB00B5B9BC /* Message.swift */,
+				29113A1924FAB15500B5B9BC /* ChatMessageViewController.swift */,
+				29113A1B24FAB43600B5B9BC /* LoginViewController.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
 		298F453624ED351E00E60CAB = {
 			isa = PBXGroup;
 			children = (
+				29113A1424FAAEC700B5B9BC /* Chat */,
 				298F457524ED36B900E60CAB /* Source */,
 				298F459724ED380D00E60CAB /* ShareModal */,
 				298F456424ED366D00E60CAB /* ModalView */,
@@ -165,7 +182,7 @@
 				298F455824ED352000E60CAB /* TikTokAppTests */,
 				298F454024ED351E00E60CAB /* Products */,
 				90D2905DF005B83A45CF42DB /* Pods */,
-				41A51ED825F781196F4E5430 /* Frameworks */,
+				CCFB42DF1F575BAA924F720B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -275,24 +292,24 @@
 			path = ShareModal;
 			sourceTree = "<group>";
 		};
-		41A51ED825F781196F4E5430 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				40F0024FC8755F7C3AAB947B /* Pods_TikTokApp.framework */,
-				C714F1BF8DBA35B4B3408471 /* Pods_TikTokAppTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		90D2905DF005B83A45CF42DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5726EBAED09F044451C1CEE2 /* Pods-TikTokApp.debug.xcconfig */,
-				CA13B37AB4C0567EF898A584 /* Pods-TikTokApp.release.xcconfig */,
-				9E3D20E824F1496FCF47E5DA /* Pods-TikTokAppTests.debug.xcconfig */,
-				E8C7B2148F4C85BF4000D903 /* Pods-TikTokAppTests.release.xcconfig */,
+				A98B6CD73CD93E5650F2DD8A /* Pods-TikTokApp.debug.xcconfig */,
+				B201D5449FEDE937EE3ECCA1 /* Pods-TikTokApp.release.xcconfig */,
+				0E2ACF88D970ABBADDA5218F /* Pods-TikTokAppTests.debug.xcconfig */,
+				25E0E8F73F66857F1D638923 /* Pods-TikTokAppTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		CCFB42DF1F575BAA924F720B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B4CFFC909939765CA8EF08B6 /* Pods_TikTokApp.framework */,
+				D1B4DDDDAEB6353F61009DE5 /* Pods_TikTokAppTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,11 +319,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 298F455E24ED352000E60CAB /* Build configuration list for PBXNativeTarget "TikTokApp" */;
 			buildPhases = (
-				AB9295F7C8D8DB5F50D7B076 /* [CP] Check Pods Manifest.lock */,
+				5520E9CCCFD60FCD31252CC1 /* [CP] Check Pods Manifest.lock */,
 				298F453B24ED351E00E60CAB /* Sources */,
 				298F453C24ED351E00E60CAB /* Frameworks */,
 				298F453D24ED351E00E60CAB /* Resources */,
-				4C2671DDD71A47ECB8E31D53 /* [CP] Embed Pods Frameworks */,
+				06ED73AEC50DD27D0A708511 /* [CP] Embed Pods Frameworks */,
+				93F45144B617FB8B0F31FCED /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -321,7 +339,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 298F456124ED352000E60CAB /* Build configuration list for PBXNativeTarget "TikTokAppTests" */;
 			buildPhases = (
-				3C715307C77EB166C348AD63 /* [CP] Check Pods Manifest.lock */,
+				A543525A079AE1952003306C /* [CP] Check Pods Manifest.lock */,
 				298F455124ED352000E60CAB /* Sources */,
 				298F455224ED352000E60CAB /* Frameworks */,
 				298F455324ED352000E60CAB /* Resources */,
@@ -428,29 +446,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3C715307C77EB166C348AD63 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TikTokAppTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4C2671DDD71A47ECB8E31D53 /* [CP] Embed Pods Frameworks */ = {
+		06ED73AEC50DD27D0A708511 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -467,7 +463,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TikTokApp/Pods-TikTokApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AB9295F7C8D8DB5F50D7B076 /* [CP] Check Pods Manifest.lock */ = {
+		5520E9CCCFD60FCD31252CC1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -483,6 +479,45 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-TikTokApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93F45144B617FB8B0F31FCED /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TikTokApp/Pods-TikTokApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TikTokApp/Pods-TikTokApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TikTokApp/Pods-TikTokApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A543525A079AE1952003306C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TikTokAppTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -508,7 +543,10 @@
 				29113A0D24FA8BB400B5B9BC /* ChatViewController.swift in Sources */,
 				298F457124ED368400E60CAB /* OverCurrentTransitionable.swift in Sources */,
 				298F457324ED368400E60CAB /* DismissAnimator.swift in Sources */,
+				29113A1C24FAB43600B5B9BC /* LoginViewController.swift in Sources */,
 				298F454524ED351E00E60CAB /* SceneDelegate.swift in Sources */,
+				29113A1624FAAEDB00B5B9BC /* Message.swift in Sources */,
+				29113A1A24FAB15500B5B9BC /* ChatMessageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -666,7 +704,7 @@
 		};
 		298F455F24ED352000E60CAB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5726EBAED09F044451C1CEE2 /* Pods-TikTokApp.debug.xcconfig */;
+			baseConfigurationReference = A98B6CD73CD93E5650F2DD8A /* Pods-TikTokApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -685,7 +723,7 @@
 		};
 		298F456024ED352000E60CAB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CA13B37AB4C0567EF898A584 /* Pods-TikTokApp.release.xcconfig */;
+			baseConfigurationReference = B201D5449FEDE937EE3ECCA1 /* Pods-TikTokApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -704,7 +742,7 @@
 		};
 		298F456224ED352000E60CAB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9E3D20E824F1496FCF47E5DA /* Pods-TikTokAppTests.debug.xcconfig */;
+			baseConfigurationReference = 0E2ACF88D970ABBADDA5218F /* Pods-TikTokAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -727,7 +765,7 @@
 		};
 		298F456324ED352000E60CAB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E8C7B2148F4C85BF4000D903 /* Pods-TikTokAppTests.release.xcconfig */;
+			baseConfigurationReference = 25E0E8F73F66857F1D638923 /* Pods-TikTokAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

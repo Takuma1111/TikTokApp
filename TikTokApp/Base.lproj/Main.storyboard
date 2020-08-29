@@ -84,6 +84,14 @@
                                     <constraint firstItem="b2z-Eh-GIu" firstAttribute="top" secondItem="Ace-kF-eVR" secondAttribute="bottom" constant="5" id="uWP-oD-hOz"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t5v-ar-1pL">
+                                <rect key="frame" x="348" y="59" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="DXt-Ae-pRO" kind="presentation" identifier="toChatRoom" id="9Nd-m3-BYt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -107,6 +115,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fcg-a4-llF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="950.72463768115949" y="861.83035714285711"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="82L-yK-beP">
+            <objects>
+                <viewController id="DXt-Ae-pRO" customClass="LoginViewController" customModule="TikTokApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L5L-tg-4zc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G2c-i1-k3h">
+                                <rect key="frame" x="183" y="630" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="tappedSignOut:" destination="DXt-Ae-pRO" eventType="touchUpInside" id="dLj-ma-Kbc"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ar-hl-Bk7" customClass="GIDSignInButton">
+                                <rect key="frame" x="87" y="357" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="3Fv-z7-NXW"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LOB-kL-2H0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qIL-X6-SSp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1776" y="861"/>
+        </scene>
+        <!--Chat Message View Controller-->
+        <scene sceneID="ciB-sT-7UP">
+            <objects>
+                <viewController id="Gig-Va-uVf" customClass="ChatMessageViewController" customModule="TikTokApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e9l-f5-zrg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="9qh-9D-rRh"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N8e-FV-f00" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2601" y="853"/>
         </scene>
         <!--マイページ-->
         <scene sceneID="yT5-al-we7">
