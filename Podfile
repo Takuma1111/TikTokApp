@@ -8,6 +8,8 @@ target 'TikTokApp' do
   # Pods for TikTokApp
  pod 'Firebase/Core'
   pod 'Firebase/Database'
+pod 'MessageKit', '~> 3.0.0'
+
   target 'TikTokAppTests' do
     inherit! :search_paths
     # Pods for testing
