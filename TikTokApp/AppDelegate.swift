@@ -12,46 +12,48 @@ import GoogleSignIn
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate{
+//
 //    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-//        if let error = error {
-//              print(error.localizedDescription)
-//              return
-//            }
+//           if let error = error {
+//               print("Error: \(error.localizedDescription)")
+//               return
+//           }
+//           let authentication = user.authentication
+//           // Googleのトークンを渡し、Firebaseクレデンシャルを取得する。
+//        let credential = GoogleAuthProvider.credential(withIDToken: (authentication?.idToken)!,
+//                                                             accessToken: (authentication?.accessToken)!)
+//           // Firebaseにログインする。
+//        Auth.auth().signIn(with: credential) { (user, error) in
+//               print("Sign on Firebase successfully")
+////                self.performSegue(withIdentifier: "viewSegue", sender: nil)//"toChatRoom"というIDで識別
+//           }
+//       }
 //
-//            guard let authentication = user.authentication else { return }
-//            let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
-//                                                              accessToken: authentication.accessToken)
-//              //最後に、認証情報を使用して Firebase での認証を行います
-//                     Auth.auth().signIn(with: credential) { (authDataResult, error) in
-//                         if let error = error {
-//                             print(error.localizedDescription)
-//                             return
-//                         }
-//                         print("\nLogin succeeded\n")
-//                        let login = LoginViewController()
-//                        login.transitionToChatRoom()
-////                         self.transitionToChatRoom()
-//                     }
-//    }
+//       func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+//           print("Sign off successfully")
+//       }
 //
-
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         changeNavigationBarColor()
         FirebaseApp.configure()
-        GIDSignIn.sharedInstance()?.clientID = FirebaseApp.app()?.options.clientID //
-//        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+//        GIDSignIn.sharedInstance()?.clientID = FirebaseApp.app()?.options.clientID //
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         
 //        GIDSignIn.sharedInstance().delegate = self
         return true
     }
 
-    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-         return GIDSignIn.sharedInstance().handle(url)
-     }
+    @available(iOS 9.0, *)
+    func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any])
+        -> Bool {
+            return GIDSignIn.sharedInstance().handle(url)
+    }
     
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        return GIDSignIn.sharedInstance().handle(url)
+    }
     // MARK: UISceneSession Lifecycle
     func changeNavigationBarColor() {
           // 全てのNavigation Barの色を変更する

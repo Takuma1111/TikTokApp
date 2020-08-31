@@ -17,6 +17,7 @@
 		29113A2224FD045900B5B9BC /* icon0032.png in Resources */ = {isa = PBXBuildFile; fileRef = 29113A2124FD045800B5B9BC /* icon0032.png */; };
 		29113A2524FD0C4500B5B9BC /* OtherChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29113A2324FD0C4500B5B9BC /* OtherChatTableViewCell.swift */; };
 		29113A2624FD0C4500B5B9BC /* OtherChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29113A2424FD0C4500B5B9BC /* OtherChatTableViewCell.xib */; };
+		29113A2924FD354800B5B9BC /* presentingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29113A2824FD354800B5B9BC /* presentingViewController.swift */; };
 		298F454324ED351E00E60CAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298F454224ED351E00E60CAB /* AppDelegate.swift */; };
 		298F454524ED351E00E60CAB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298F454424ED351E00E60CAB /* SceneDelegate.swift */; };
 		298F454724ED351E00E60CAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298F454624ED351E00E60CAB /* ViewController.swift */; };
@@ -92,6 +93,7 @@
 		29113A2124FD045800B5B9BC /* icon0032.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon0032.png; path = ../../../../Downloads/icon0032.png; sourceTree = "<group>"; };
 		29113A2324FD0C4500B5B9BC /* OtherChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherChatTableViewCell.swift; sourceTree = "<group>"; };
 		29113A2424FD0C4500B5B9BC /* OtherChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtherChatTableViewCell.xib; sourceTree = "<group>"; };
+		29113A2824FD354800B5B9BC /* presentingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = presentingViewController.swift; sourceTree = "<group>"; };
 		298F453F24ED351E00E60CAB /* TikTokApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TikTokApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		298F454224ED351E00E60CAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		298F454424ED351E00E60CAB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 				298F454B24ED352000E60CAB /* Assets.xcassets */,
 				298F454D24ED352000E60CAB /* LaunchScreen.storyboard */,
 				298F455024ED352000E60CAB /* Info.plist */,
+				29113A2824FD354800B5B9BC /* presentingViewController.swift */,
 			);
 			path = TikTokApp;
 			sourceTree = "<group>";
@@ -575,6 +578,7 @@
 				298F454524ED351E00E60CAB /* SceneDelegate.swift in Sources */,
 				29113A1624FAAEDB00B5B9BC /* Message.swift in Sources */,
 				29113A1A24FAB15500B5B9BC /* ChatMessageViewController.swift in Sources */,
+				29113A2924FD354800B5B9BC /* presentingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

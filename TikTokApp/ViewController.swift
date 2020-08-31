@@ -38,10 +38,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("送信者の名前:",user?.displayName)
-        print("送信者のid:",user?.uid)
-        
-        
+//        print("送信者の名前:",user.displayName)
+//        print("送信者のid:",user.uid)
         
         //動画再生呼び出し
         movieStart("マイムービー 1")

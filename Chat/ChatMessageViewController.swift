@@ -4,9 +4,6 @@ import MessageInputBar//追加
 import Firebase   //追加
 import GoogleSignIn
 import InputBarAccessoryView
-import FirebaseAuth
-import FirebaseDatabase
-
 
 class ChatMessageViewController: MessagesViewController, InputBarAccessoryViewDelegate { // <- MessagesViewControllerに必ず書き換える
 
@@ -63,7 +60,7 @@ class ChatMessageViewController: MessagesViewController, InputBarAccessoryViewDe
        func updateViewWhenMessageAdded2() {
 
            //handle = でDatabaseHandleを取得
-           handle = ref.childByAutoId().queryLimited(toLast: 25).queryOrdered(byChild: "createdAt").observe(.value) { (snapshot: DataSnapshot) in
+           handle = ref.childByAutoId().queryLimited(toLast: 25).observe(.value) { (snapshot: DataSnapshot) in
                DispatchQueue.main.async {
                    self.snapshotToArray(snapshot: snapshot)
                    self.displayMessage()
@@ -72,6 +69,8 @@ class ChatMessageViewController: MessagesViewController, InputBarAccessoryViewDe
            }
        }
     
+    var displayName : String = ""
+    var senderID : String = ""
     //Firebaseにチャット内容を保存するためのメソッド
     func sendMessageToFirebase(text: String){
         if !sendData.isEmpty {sendData = [:] }          //辞書の初期化
@@ -80,10 +79,10 @@ class ChatMessageViewController: MessagesViewController, InputBarAccessoryViewDe
 //                     "content": text,                   //送信内容（今回は文字のみ）
 //                     "createdAt": dateFormatter.string(from: Date()) //送信時刻
 //        ]
-        sendData = [ "senderName": "No name",   //送信者の名前
-                          "senderID": "000",             //送信者のID
-                          "content": text,                   //送信内容（今回は文字のみ）
-                          "createdAt": dateFormatter.string(from: Date()) //送信時刻
+        sendData = [ "senderName": displayName,   //送信者の名前
+                          "senderID": senderID,             //送信者のID
+                          "content": text                   //送信内容（今回は文字のみ）
+//                          "createdAt": dateFormatter.string(from: Date()) //送信時刻
              ]
         ref.childByAutoId().setValue(sendData)
 //        ref.child("indexOn").childByAutoId().setValue(sendData) //ここで実際にデータベースに書き込んでいます
@@ -93,7 +92,7 @@ class ChatMessageViewController: MessagesViewController, InputBarAccessoryViewDe
 
 extension ChatMessageViewController: MessagesDataSource {
     func currentSender() -> SenderType {
-        return Sender(id: user.uid, displayName: user.displayName!)
+        return Sender(id: senderID, displayName: displayName)
     }
     
     //自分の情報を設定
@@ -136,7 +135,7 @@ extension ChatMessageViewController: MessagesDataSource {
     
        //メッセージが追加された際に読み込んで画面を更新するメソッド
         func updateViewWhenMessageAdded() {
-            ref.childByAutoId().queryLimited(toLast: 25).queryOrdered(byChild: "createdAt").observe(.value) { (snapshot: DataSnapshot) in
+            ref.childByAutoId().queryLimited(toLast: 25).observe(.value) { (snapshot: DataSnapshot) in
                 DispatchQueue.main.async {//クロージャの中を同期処理
                     self.snapshotToArray(snapshot: snapshot)//スナップショットを配列(readData)に入れる処理。下に定義
                     self.displayMessage() //メッセージを画面に表示するための処理
