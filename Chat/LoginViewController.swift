@@ -30,11 +30,11 @@ class LoginViewController: UIViewController,GIDSignInDelegate {
                       // Firebaseにログインする。
                    Auth.auth().signIn(with: credential) { (user, error) in
                           print("Sign on Firebase successfully")
-                    print("送信者の名前:",user?.user.displayName)
-                    print("送信者のid:",user?.user.uid)
-                          
-                    print("name::",user?.user.displayName)
-                    print("uid::",user?.user.uid)
+//                    print("送信者の名前:",user?.user.displayName)
+//                    print("送信者のid:",user?.user.uid)
+//
+//                    print("name::",user?.user.displayName)
+//                    print("uid::",user?.user.uid)
                     self.displayName = user?.user.displayName as! String
                     self.userId = user?.user.uid as! String
                     self.transitionToChatRoom()
@@ -49,13 +49,13 @@ class LoginViewController: UIViewController,GIDSignInDelegate {
         print("yばれた")
     }
 
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//         if segue.identifier == "viewSegue" {
-//             let nextVC = segue.destination as! ChatMessageViewController
-//             nextVC.displayName = displayName
-//             nextVC.senderID = userId
-//         }
-//     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         if segue.identifier == "viewSegue" {
+             let nextVC = segue.destination as! ChatViewController
+             nextVC.displayName = displayName
+             nextVC.senderID = userId
+         }
+     }
     //Googleサインインに関するデリゲートメソッド
     //signIn:didSignInForUser:withError: メソッドで、Google ID トークンと Google アクセス トークンを
     //GIDAuthentication オブジェクトから取得して、Firebase 認証情報と交換します。

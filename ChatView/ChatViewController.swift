@@ -27,8 +27,14 @@ class ChatViewController: UIViewController ,UITableViewDelegate{
     var count : Int = 0
     var resName : String = ""
     var array : [[String]] = []
+    
+    var displayName : String = ""
+    var senderID : String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("受け取った：",displayName + senderID)
+        
         tableView.delegate = self
         tableView.dataSource = self
         self.tableView.register(UINib(nibName: "ChatTableViewCell", bundle: nil), forCellReuseIdentifier: "ChatTableViewCell")
@@ -37,20 +43,22 @@ class ChatViewController: UIViewController ,UITableViewDelegate{
         databaseRef = Database.database().reference()
         //observeでイベント監視を行う
         databaseRef.observe(.childAdded, with: { snapshot in
-            if let obj = snapshot.value as? [String : AnyObject], let name = obj["name"] as? String, let message = obj["message"] {
+            if let obj = snapshot.value as? [String : AnyObject], let name = obj["name"] as? String, let message = obj["message"],let id = obj["id"] as? String {
 //                       let currentText = self.textView.text
                 self.resName = name
-                if(name != "T2"){
+                if(id != self.senderID){
                     self.otherResponse.append(message as! String)
                     var a :[String] = []
                     a.append(name)
                     a.append(message as! String)
+                    a.append(id)
                     self.array.append(a)
                 }else{
                     self.response.append(message as! String)
                     var a :[String] = []
                     a.append(name)
                     a.append(message as! String)
+                    a.append(id)
                     self.array.append(a)
                 }
 //                self.judge = true
@@ -68,27 +76,25 @@ class ChatViewController: UIViewController ,UITableViewDelegate{
         }
 
         //キーボードが表示されるタイミングと非表示になるタイミングを監視
-       NotificationCenter.default.addObserver(self, selector: #selector(ChatViewController.keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-       NotificationCenter.default.addObserver(self, selector: #selector(ChatViewController.keyboardWillHide(_:)), name: UIResponder.keyboardDidHideNotification, object: nil)
-
+//      z
     }
     
-    @objc func keyboardWillShow(_ notification: NSNotification){
-          if let userInfo = notification.userInfo, let keyboardFrameInfo = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
-              inputViewBottomMargin.constant = keyboardFrameInfo.cgRectValue.height
-          }
-      }
-
-      @objc func keyboardWillHide(_ notification: NSNotification){
-          inputViewBottomMargin.constant = 0
-      }
-    
+//    @objc func keyboardWillShow(_ notification: NSNotification){
+//          if let userInfo = notification.userInfo, let keyboardFrameInfo = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+//              inputViewBottomMargin.constant = keyboardFrameInfo.cgRectValue.height
+//          }
+//      }
+//
+//      @objc func keyboardWillHide(_ notification: NSNotification){
+//          inputViewBottomMargin.constant = 0
+//      }
+//
     //ボタンを押した際にtextfieldに入力されたデータを送信
     @IBAction func sendButton(_ sender: Any) {
         view.endEditing(true)
 
         if let mess = messageInputView.text {
-            let messageData = ["name":"T2" ,"message" : mess]
+            let messageData = ["name":displayName ,"message" : mess,"id":senderID]
             databaseRef.childByAutoId().setValue(messageData)
             messageInputView.text = ""
             response.append(mess)
@@ -137,7 +143,7 @@ extension ChatViewController : UITableViewDataSource{
 //        let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "chatCell") as! ChatTableViewCell
 
         var cell : UITableViewCell;
-        if(array[indexPath.row][0] == "T2"){
+        if(array[indexPath.row][2] == senderID){
             cell = tableView.dequeueReusableCell(withIdentifier: "ChatTableViewCell") as! ChatTableViewCell
             cell.textLabel?.text = array[indexPath.row][1]
 //            cell.textLabel?.textAlignment = NSTextAlignment.center
