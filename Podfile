@@ -10,9 +10,9 @@ target 'TikTokApp' do
   pod 'Firebase/Database'
 pod 'MessageKit','~> 3.1.0'
 pod 'Firebase/Auth'
-  pod 'GoogleSignIn'
-
-
+  pod 'GoogleSignIn', '~> 5.0'
+pod 'MessageInputBar'
+pod 'InputBarAccessoryView'
   target 'TikTokAppTests' do
     inherit! :search_paths
     # Pods for testing

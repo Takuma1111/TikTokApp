@@ -89,6 +89,9 @@ PODS:
     - InputBarAccessoryView/Core (= 4.3.3)
   - InputBarAccessoryView/Core (4.3.3)
   - leveldb-library (1.22)
+  - MessageInputBar (0.4.1):
+    - MessageInputBar/Core (= 0.4.1)
+  - MessageInputBar/Core (0.4.1)
   - MessageKit (3.1.0):
     - InputBarAccessoryView (~> 4.3.0)
   - nanopb (1.30906.0):
@@ -102,7 +105,9 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
-  - GoogleSignIn
+  - GoogleSignIn (~> 5.0)
+  - InputBarAccessoryView
+  - MessageInputBar
   - MessageKit (~> 3.1.0)
 
 SPEC REPOS:
@@ -123,6 +128,7 @@ SPEC REPOS:
     - GTMSessionFetcher
     - InputBarAccessoryView
     - leveldb-library
+    - MessageInputBar
     - MessageKit
     - nanopb
     - PromisesObjC
@@ -144,10 +150,11 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
   InputBarAccessoryView: 8e7fc09e9cba75e0fee5da13450e15c194806f69
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
+  MessageInputBar: e81c7535347f1f7b923de7080409a535a004b6e4
   MessageKit: 3beb578737a5aa2bba25cc27c7b6d6faa09af5a7
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
   PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
 
-PODFILE CHECKSUM: ef41bdb440c984fdb8213722174af9ab9d5d458f
+PODFILE CHECKSUM: c9f1b13e256213caeaaa74864a37316babdac4ff
 
 COCOAPODS: 1.8.4

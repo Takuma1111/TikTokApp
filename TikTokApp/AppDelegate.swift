@@ -11,19 +11,29 @@ import Firebase
 import GoogleSignIn
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate , GIDSignInDelegate {
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        if let error = error {
-          // ...
-          return
-        }
-
-        guard let authentication = user.authentication else { return }
-        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
-                                                          accessToken: authentication.accessToken)
-        
-    }
-    
+class AppDelegate: UIResponder, UIApplicationDelegate{
+//    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+//        if let error = error {
+//              print(error.localizedDescription)
+//              return
+//            }
+//
+//            guard let authentication = user.authentication else { return }
+//            let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+//                                                              accessToken: authentication.accessToken)
+//              //最後に、認証情報を使用して Firebase での認証を行います
+//                     Auth.auth().signIn(with: credential) { (authDataResult, error) in
+//                         if let error = error {
+//                             print(error.localizedDescription)
+//                             return
+//                         }
+//                         print("\nLogin succeeded\n")
+//                        let login = LoginViewController()
+//                        login.transitionToChatRoom()
+////                         self.transitionToChatRoom()
+//                     }
+//    }
+//
 
 
 
@@ -32,13 +42,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate , GIDSignInDelegate {
         changeNavigationBarColor()
         FirebaseApp.configure()
         GIDSignIn.sharedInstance()?.clientID = FirebaseApp.app()?.options.clientID //
-        GIDSignIn.sharedInstance().delegate = self
+//        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+        
+//        GIDSignIn.sharedInstance().delegate = self
         return true
     }
 
-    @available(iOS 9.0, *)
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        return GIDSignIn.sharedInstance().handle(url)
+         return GIDSignIn.sharedInstance().handle(url)
      }
     
     // MARK: UISceneSession Lifecycle
