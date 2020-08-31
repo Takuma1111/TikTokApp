@@ -189,9 +189,22 @@
 			path = Chat;
 			sourceTree = "<group>";
 		};
+		29113A2724FD274200B5B9BC /* ChatView */ = {
+			isa = PBXGroup;
+			children = (
+				29113A0C24FA8BB400B5B9BC /* ChatViewController.swift */,
+				29113A1D24FCF81800B5B9BC /* ChatTableViewCell.swift */,
+				29113A1E24FCF81800B5B9BC /* ChatTableViewCell.xib */,
+				29113A2324FD0C4500B5B9BC /* OtherChatTableViewCell.swift */,
+				29113A2424FD0C4500B5B9BC /* OtherChatTableViewCell.xib */,
+			);
+			path = ChatView;
+			sourceTree = "<group>";
+		};
 		298F453624ED351E00E60CAB = {
 			isa = PBXGroup;
 			children = (
+				29113A2724FD274200B5B9BC /* ChatView */,
 				29113A1424FAAEC700B5B9BC /* Chat */,
 				298F457524ED36B900E60CAB /* Source */,
 				298F459724ED380D00E60CAB /* ShareModal */,
@@ -225,11 +238,6 @@
 				298F454B24ED352000E60CAB /* Assets.xcassets */,
 				298F454D24ED352000E60CAB /* LaunchScreen.storyboard */,
 				298F455024ED352000E60CAB /* Info.plist */,
-				29113A0C24FA8BB400B5B9BC /* ChatViewController.swift */,
-				29113A1D24FCF81800B5B9BC /* ChatTableViewCell.swift */,
-				29113A1E24FCF81800B5B9BC /* ChatTableViewCell.xib */,
-				29113A2324FD0C4500B5B9BC /* OtherChatTableViewCell.swift */,
-				29113A2424FD0C4500B5B9BC /* OtherChatTableViewCell.xib */,
 			);
 			path = TikTokApp;
 			sourceTree = "<group>";

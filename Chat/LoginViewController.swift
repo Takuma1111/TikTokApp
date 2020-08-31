@@ -2,6 +2,7 @@ import UIKit
 import Firebase     //追加
 import GoogleSignIn//追加
 
+
 class LoginViewController: UIViewController,GIDSignInDelegate {
                                                 //２つのデリゲートのプロトコルを追加
     override func viewDidLoad() {
@@ -19,7 +20,7 @@ class LoginViewController: UIViewController,GIDSignInDelegate {
 
     //チャット画面への遷移メソッド
     func transitionToChatRoom() {
-        performSegue(withIdentifier: "toChatRoom", sender: AppDelegate())//"toChatRoom"というIDで識別
+        performSegue(withIdentifier: "viewSegue", sender: nil)//"toChatRoom"というIDで識別
         print("yばれた")
     }
 
@@ -67,6 +68,9 @@ class LoginViewController: UIViewController,GIDSignInDelegate {
                    print("\nLogin succeeded\n")
                    self.transitionToChatRoom()
                }
+        guard let authentication = user.authentication else { return }
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+                                                          accessToken: authentication.accessToken)
     }
     @IBAction func tappedSignOut(_ sender: Any) {
         let firebaseAuth = Auth.auth()
