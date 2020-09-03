@@ -7,16 +7,25 @@ class LoginViewController: UIViewController,GIDSignInDelegate {
     
     private var displayName = ""
     private var userId = ""
+    
+    
+
+//    var provider = OAuthProvider(providerID: "twitter.com")
+
+    
     //２つのデリゲートのプロトコルを追加
     override func viewDidLoad() {
         super.viewDidLoad()
-
+//        provider.customParameters = [
+//             "lang": "fr"
+//             ]
 //        GIDSignIn.sharedInstance()?.uiDelegate = self
         GIDSignIn.sharedInstance()!.delegate = self
 //
         GIDSignIn.sharedInstance()!.presentingViewController = self
         GIDSignIn.sharedInstance().signIn()
 //        transitionToChatRoom()
+        
     }
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
              if let error = error {
@@ -42,7 +51,9 @@ class LoginViewController: UIViewController,GIDSignInDelegate {
                       }
        }
     /*** ここから追加！ ***/
-
+    @IBAction func buttonDidPush() {
+            
+    }
     //チャット画面への遷移メソッド
     func transitionToChatRoom() {
         performSegue(withIdentifier: "viewSegue", sender: nil)//"toChatRoom"というIDで識別
