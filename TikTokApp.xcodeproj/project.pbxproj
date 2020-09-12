@@ -47,7 +47,6 @@
 		298F459124ED36C600E60CAB /* スクリーンショット 2020-08-16 22.16.42.png in Resources */ = {isa = PBXBuildFile; fileRef = 298F458324ED36C600E60CAB /* スクリーンショット 2020-08-16 22.16.42.png */; };
 		298F459524ED36FC00E60CAB /* ColorTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298F459324ED36FC00E60CAB /* ColorTabBarController.swift */; };
 		298F459624ED36FC00E60CAB /* tabBarColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298F459424ED36FC00E60CAB /* tabBarColor.swift */; };
-		298F459B24ED38AC00E60CAB /* SemiModalViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 298F459A24ED38AC00E60CAB /* SemiModalViewController.storyboard */; };
 		298F45A124ED3AC800E60CAB /* ShareModalViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 298F45A024ED3AC700E60CAB /* ShareModalViewController.storyboard */; };
 		298F45A324ED3C0000E60CAB /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298F45A224ED3C0000E60CAB /* ShareViewController.swift */; };
 		298F45A924ED726D00E60CAB /* messangericon.png in Resources */ = {isa = PBXBuildFile; fileRef = 298F45A424ED726D00E60CAB /* messangericon.png */; };
@@ -66,6 +65,7 @@
 		298F45C424EFBD4000E60CAB /* マイムービー 1.mov in Resources */ = {isa = PBXBuildFile; fileRef = 298F45C324EFBD4000E60CAB /* マイムービー 1.mov */; };
 		298F45C624EFC5D000E60CAB /* tabaco.png in Resources */ = {isa = PBXBuildFile; fileRef = 298F45C524EFC5D000E60CAB /* tabaco.png */; };
 		298F45C824EFC66100E60CAB /* tabacoIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 298F45C724EFC66100E60CAB /* tabacoIcon.png */; };
+		29E22FC8250C9DCD003F6FDE /* SemiModalViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29E22FC7250C9DCD003F6FDE /* SemiModalViewController.storyboard */; };
 		585358C47D4E9A667CCA1032 /* Pods_TikTokApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 413A7E00B46D6AB4A9B51BAF /* Pods_TikTokApp.framework */; };
 		B8918E054CCD44C2997282CE /* Pods_TikTokAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C43930392BDC344302849852 /* Pods_TikTokAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -127,7 +127,6 @@
 		298F458324ED36C600E60CAB /* スクリーンショット 2020-08-16 22.16.42.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "スクリーンショット 2020-08-16 22.16.42.png"; path = "../../../スクリーンショット 2020-08-16 22.16.42.png"; sourceTree = "<group>"; };
 		298F459324ED36FC00E60CAB /* ColorTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTabBarController.swift; sourceTree = "<group>"; };
 		298F459424ED36FC00E60CAB /* tabBarColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tabBarColor.swift; sourceTree = "<group>"; };
-		298F459A24ED38AC00E60CAB /* SemiModalViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SemiModalViewController.storyboard; path = ../../../../.Trash/SemiModalViewController.storyboard; sourceTree = "<group>"; };
 		298F45A024ED3AC700E60CAB /* ShareModalViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShareModalViewController.storyboard; sourceTree = "<group>"; };
 		298F45A224ED3C0000E60CAB /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		298F45A424ED726D00E60CAB /* messangericon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = messangericon.png; path = ../../../../Downloads/messangericon.png; sourceTree = "<group>"; };
@@ -146,6 +145,7 @@
 		298F45C324EFBD4000E60CAB /* マイムービー 1.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = "マイムービー 1.mov"; path = "../../../../Documents/マイムービー 1.mov"; sourceTree = "<group>"; };
 		298F45C524EFC5D000E60CAB /* tabaco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tabaco.png; path = ../../../tabaco.png; sourceTree = "<group>"; };
 		298F45C724EFC66100E60CAB /* tabacoIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tabacoIcon.png; path = ../../../tabacoIcon.png; sourceTree = "<group>"; };
+		29E22FC7250C9DCD003F6FDE /* SemiModalViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SemiModalViewController.storyboard; path = ../../../../SwiftClone/SemiModalVerticalOverCurrentTransitioning/SemiModalOverCurrentTransitioning/SemiModalViewController.storyboard; sourceTree = "<group>"; };
 		413A7E00B46D6AB4A9B51BAF /* Pods_TikTokApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TikTokApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9267F13D8107480042E6FCC8 /* Pods-TikTokApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTokApp.debug.xcconfig"; path = "Target Support Files/Pods-TikTokApp/Pods-TikTokApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B6CDE982CF6B51995E1E086D /* Pods-TikTokApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TikTokApp.release.xcconfig"; path = "Target Support Files/Pods-TikTokApp/Pods-TikTokApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -261,7 +261,7 @@
 				298F456C24ED368400E60CAB /* ModalPresentationController.swift */,
 				298F456B24ED368400E60CAB /* OverCurrentTransitionable.swift */,
 				298F456924ED368400E60CAB /* OverCurrentTransitioningInteractor.swift */,
-				298F459A24ED38AC00E60CAB /* SemiModalViewController.storyboard */,
+				29E22FC7250C9DCD003F6FDE /* SemiModalViewController.storyboard */,
 				298F456A24ED368400E60CAB /* SemiModalViewController.swift */,
 				298F456524ED366D00E60CAB /* CustomTableViewCell.xib */,
 				298F456624ED366D00E60CAB /* CustomTableViewCell.swift */,
@@ -454,6 +454,7 @@
 				298F458924ED36C600E60CAB /* banana.png in Resources */,
 				298F45C824EFC66100E60CAB /* tabacoIcon.png in Resources */,
 				298F458B24ED36C600E60CAB /* banana (1).png in Resources */,
+				29E22FC8250C9DCD003F6FDE /* SemiModalViewController.storyboard in Resources */,
 				29113A0F24FA8E6F00B5B9BC /* GoogleService-Info.plist in Resources */,
 				298F458E24ED36C600E60CAB /* E38390E3838AE3838A.png in Resources */,
 				29113A2024FCF81800B5B9BC /* ChatTableViewCell.xib in Resources */,
@@ -461,7 +462,6 @@
 				298F45B624EE938100E60CAB /* 失恋アイコン2.png in Resources */,
 				298F45AD24ED726D00E60CAB /* lineicon.png in Resources */,
 				298F458A24ED36C600E60CAB /* シェア矢印アイコン.png in Resources */,
-				298F459B24ED38AC00E60CAB /* SemiModalViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
