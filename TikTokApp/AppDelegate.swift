@@ -8,52 +8,22 @@
 
 import UIKit
 import Firebase
-import GoogleSignIn
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate{
-//
-//    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-//           if let error = error {
-//               print("Error: \(error.localizedDescription)")
-//               return
-//           }
-//           let authentication = user.authentication
-//           // Googleのトークンを渡し、Firebaseクレデンシャルを取得する。
-//        let credential = GoogleAuthProvider.credential(withIDToken: (authentication?.idToken)!,
-//                                                             accessToken: (authentication?.accessToken)!)
-//           // Firebaseにログインする。
-//        Auth.auth().signIn(with: credential) { (user, error) in
-//               print("Sign on Firebase successfully")
-////                self.performSegue(withIdentifier: "viewSegue", sender: nil)//"toChatRoom"というIDで識別
-//           }
-//       }
-//
-//       func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
-//           print("Sign off successfully")
-//       }
-//
+
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         changeNavigationBarColor()
         FirebaseApp.configure()
 //        GIDSignIn.sharedInstance()?.clientID = FirebaseApp.app()?.options.clientID //
-        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
-        
+//        GIDSignIn.sharedInstance.clientID = FirebaseApp.app()?.options.clientID
+    
 //        GIDSignIn.sharedInstance().delegate = self
         return true
     }
 
-    @available(iOS 9.0, *)
-    func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any])
-        -> Bool {
-            return GIDSignIn.sharedInstance().handle(url)
-    }
-    
-    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-        return GIDSignIn.sharedInstance().handle(url)
-    }
     // MARK: UISceneSession Lifecycle
     func changeNavigationBarColor() {
           // 全てのNavigation Barの色を変更する

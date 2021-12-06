@@ -6,13 +6,10 @@ target 'TikTokApp' do
   use_frameworks!
 
   # Pods for TikTokApp
- pod 'Firebase/Core'
-  pod 'Firebase/Database'
-pod 'MessageKit','~> 3.1.0'
-pod 'Firebase/Auth'
-  pod 'GoogleSignIn', '~> 5.0'
-pod 'MessageInputBar'
-pod 'InputBarAccessoryView'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Core'
+  pod 'Firebase/Database', '~>6.5.0'
+  pod 'Firebase/Auth'
   target 'TikTokAppTests' do
     inherit! :search_paths
     # Pods for testing

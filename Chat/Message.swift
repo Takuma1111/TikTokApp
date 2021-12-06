@@ -1,5 +1,5 @@
 import Foundation
-import MessageKit
+//import MessageKit
 
 struct Message: MessageType {
     var sender: SenderType

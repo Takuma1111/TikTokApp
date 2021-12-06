@@ -1,9 +1,5 @@
 import UIKit
-import MessageKit//追加
-import MessageInputBar//追加
-import Firebase   //追加
-import GoogleSignIn
-import InputBarAccessoryView
+import Firebase 
 
 class ChatMessageViewController: MessagesViewController, InputBarAccessoryViewDelegate { // <- MessagesViewControllerに必ず書き換える
 

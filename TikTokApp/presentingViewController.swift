@@ -8,7 +8,7 @@
 
 import UIKit
 import Firebase
-import GoogleSignIn//追加
+import GoogleSignIn
 
 class presentingViewController: UIViewController,GIDSignInDelegate{
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {

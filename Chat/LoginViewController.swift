@@ -1,6 +1,6 @@
 import UIKit
 import Firebase     //追加
-import GoogleSignIn//追加
+//import GoogleSignIn//追加
 
 
 class LoginViewController: UIViewController,GIDSignInDelegate {
