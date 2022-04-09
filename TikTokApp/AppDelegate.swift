@@ -10,14 +10,17 @@ import UIKit
 import Firebase
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
+class AppDelegate: UIResponder, UIApplicationDelegate{
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         changeNavigationBarColor()
-        FirebaseApp.configure() 
+        FirebaseApp.configure()
+//        GIDSignIn.sharedInstance()?.clientID = FirebaseApp.app()?.options.clientID //
+//        GIDSignIn.sharedInstance.clientID = FirebaseApp.app()?.options.clientID
+    
+//        GIDSignIn.sharedInstance().delegate = self
         return true
     }
 

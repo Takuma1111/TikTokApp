@@ -8,7 +8,7 @@
 
 import UIKit
 import AVFoundation
-
+import Firebase
 //Fat View Controller😭
 class ViewController: UIViewController {
 
@@ -34,8 +34,13 @@ class ViewController: UIViewController {
 
     var judge : Bool = false
     
+    private var user: User! //ユーザー
+
     override func viewDidLoad() {
         super.viewDidLoad()
+//        print("送信者の名前:",user.displayName)
+//        print("送信者のid:",user.uid)
+        
         //動画再生呼び出し
         movieStart("マイムービー 1")
         //UI生成呼び出し
